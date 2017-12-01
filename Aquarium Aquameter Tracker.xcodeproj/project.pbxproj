@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		241544BE1FD11D1C007E08EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544BD1FD11D1C007E08EF /* AppDelegate.m */; };
+		241544C11FD11D1C007E08EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544C01FD11D1C007E08EF /* ViewController.m */; };
+		241544C41FD11D1C007E08EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241544C21FD11D1C007E08EF /* Main.storyboard */; };
+		241544C71FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 241544C51FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld */; };
+		241544C91FD11D1C007E08EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241544C81FD11D1C007E08EF /* Assets.xcassets */; };
+		241544CC1FD11D1C007E08EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241544CA1FD11D1C007E08EF /* LaunchScreen.storyboard */; };
+		241544CF1FD11D1C007E08EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544CE1FD11D1C007E08EF /* main.m */; };
+		241544D91FD11D1C007E08EF /* Aquarium_Aquameter_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544D81FD11D1C007E08EF /* Aquarium_Aquameter_TrackerTests.m */; };
+		241544E41FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544E31FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		241544D51FD11D1C007E08EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 241544B11FD11D1B007E08EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 241544B81FD11D1B007E08EF;
+			remoteInfo = "Aquarium Aquameter Tracker";
+		};
+		241544E01FD11D1C007E08EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 241544B11FD11D1B007E08EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 241544B81FD11D1B007E08EF;
+			remoteInfo = "Aquarium Aquameter Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		241544B91FD11D1B007E08EF /* Aquarium Aquameter Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aquarium Aquameter Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		241544BC1FD11D1C007E08EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		241544BD1FD11D1C007E08EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		241544BF1FD11D1C007E08EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		241544C01FD11D1C007E08EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		241544C31FD11D1C007E08EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		241544C61FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aquarium_Aquameter_Tracker.xcdatamodel; sourceTree = "<group>"; };
+		241544C81FD11D1C007E08EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		241544CB1FD11D1C007E08EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		241544CD1FD11D1C007E08EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		241544CE1FD11D1C007E08EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		241544D41FD11D1C007E08EF /* Aquarium Aquameter TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aquarium Aquameter TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		241544D81FD11D1C007E08EF /* Aquarium_Aquameter_TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aquarium_Aquameter_TrackerTests.m; sourceTree = "<group>"; };
+		241544DA1FD11D1C007E08EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		241544DF1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aquarium Aquameter TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		241544E31FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aquarium_Aquameter_TrackerUITests.m; sourceTree = "<group>"; };
+		241544E51FD11D1C007E08EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		241544B61FD11D1B007E08EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		241544D11FD11D1C007E08EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		241544DC1FD11D1C007E08EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		241544B01FD11D1B007E08EF = {
+			isa = PBXGroup;
+			children = (
+				241544BB1FD11D1B007E08EF /* Aquarium Aquameter Tracker */,
+				241544D71FD11D1C007E08EF /* Aquarium Aquameter TrackerTests */,
+				241544E21FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests */,
+				241544BA1FD11D1B007E08EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		241544BA1FD11D1B007E08EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				241544B91FD11D1B007E08EF /* Aquarium Aquameter Tracker.app */,
+				241544D41FD11D1C007E08EF /* Aquarium Aquameter TrackerTests.xctest */,
+				241544DF1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		241544BB1FD11D1B007E08EF /* Aquarium Aquameter Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				241544BC1FD11D1C007E08EF /* AppDelegate.h */,
+				241544BD1FD11D1C007E08EF /* AppDelegate.m */,
+				241544BF1FD11D1C007E08EF /* ViewController.h */,
+				241544C01FD11D1C007E08EF /* ViewController.m */,
+				241544C21FD11D1C007E08EF /* Main.storyboard */,
+				241544C81FD11D1C007E08EF /* Assets.xcassets */,
+				241544CA1FD11D1C007E08EF /* LaunchScreen.storyboard */,
+				241544CD1FD11D1C007E08EF /* Info.plist */,
+				241544CE1FD11D1C007E08EF /* main.m */,
+				241544C51FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld */,
+			);
+			path = "Aquarium Aquameter Tracker";
+			sourceTree = "<group>";
+		};
+		241544D71FD11D1C007E08EF /* Aquarium Aquameter TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				241544D81FD11D1C007E08EF /* Aquarium_Aquameter_TrackerTests.m */,
+				241544DA1FD11D1C007E08EF /* Info.plist */,
+			);
+			path = "Aquarium Aquameter TrackerTests";
+			sourceTree = "<group>";
+		};
+		241544E21FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				241544E31FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m */,
+				241544E51FD11D1C007E08EF /* Info.plist */,
+			);
+			path = "Aquarium Aquameter TrackerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		241544B81FD11D1B007E08EF /* Aquarium Aquameter Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 241544E81FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter Tracker" */;
+			buildPhases = (
+				241544B51FD11D1B007E08EF /* Sources */,
+				241544B61FD11D1B007E08EF /* Frameworks */,
+				241544B71FD11D1B007E08EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aquarium Aquameter Tracker";
+			productName = "Aquarium Aquameter Tracker";
+			productReference = 241544B91FD11D1B007E08EF /* Aquarium Aquameter Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		241544D31FD11D1C007E08EF /* Aquarium Aquameter TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 241544EB1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter TrackerTests" */;
+			buildPhases = (
+				241544D01FD11D1C007E08EF /* Sources */,
+				241544D11FD11D1C007E08EF /* Frameworks */,
+				241544D21FD11D1C007E08EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				241544D61FD11D1C007E08EF /* PBXTargetDependency */,
+			);
+			name = "Aquarium Aquameter TrackerTests";
+			productName = "Aquarium Aquameter TrackerTests";
+			productReference = 241544D41FD11D1C007E08EF /* Aquarium Aquameter TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		241544DE1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 241544EE1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter TrackerUITests" */;
+			buildPhases = (
+				241544DB1FD11D1C007E08EF /* Sources */,
+				241544DC1FD11D1C007E08EF /* Frameworks */,
+				241544DD1FD11D1C007E08EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				241544E11FD11D1C007E08EF /* PBXTargetDependency */,
+			);
+			name = "Aquarium Aquameter TrackerUITests";
+			productName = "Aquarium Aquameter TrackerUITests";
+			productReference = 241544DF1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		241544B11FD11D1B007E08EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Duy Le";
+				TargetAttributes = {
+					241544B81FD11D1B007E08EF = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					241544D31FD11D1C007E08EF = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 241544B81FD11D1B007E08EF;
+					};
+					241544DE1FD11D1C007E08EF = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 241544B81FD11D1B007E08EF;
+					};
+				};
+			};
+			buildConfigurationList = 241544B41FD11D1B007E08EF /* Build configuration list for PBXProject "Aquarium Aquameter Tracker" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 241544B01FD11D1B007E08EF;
+			productRefGroup = 241544BA1FD11D1B007E08EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				241544B81FD11D1B007E08EF /* Aquarium Aquameter Tracker */,
+				241544D31FD11D1C007E08EF /* Aquarium Aquameter TrackerTests */,
+				241544DE1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		241544B71FD11D1B007E08EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241544CC1FD11D1C007E08EF /* LaunchScreen.storyboard in Resources */,
+				241544C91FD11D1C007E08EF /* Assets.xcassets in Resources */,
+				241544C41FD11D1C007E08EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		241544D21FD11D1C007E08EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		241544DD1FD11D1C007E08EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		241544B51FD11D1B007E08EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241544C71FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld in Sources */,
+				241544C11FD11D1C007E08EF /* ViewController.m in Sources */,
+				241544CF1FD11D1C007E08EF /* main.m in Sources */,
+				241544BE1FD11D1C007E08EF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		241544D01FD11D1C007E08EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241544D91FD11D1C007E08EF /* Aquarium_Aquameter_TrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		241544DB1FD11D1C007E08EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241544E41FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		241544D61FD11D1C007E08EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 241544B81FD11D1B007E08EF /* Aquarium Aquameter Tracker */;
+			targetProxy = 241544D51FD11D1C007E08EF /* PBXContainerItemProxy */;
+		};
+		241544E11FD11D1C007E08EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 241544B81FD11D1B007E08EF /* Aquarium Aquameter Tracker */;
+			targetProxy = 241544E01FD11D1C007E08EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		241544C21FD11D1C007E08EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				241544C31FD11D1C007E08EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		241544CA1FD11D1C007E08EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				241544CB1FD11D1C007E08EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		241544E61FD11D1C007E08EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		241544E71FD11D1C007E08EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		241544E91FD11D1C007E08EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y692F89PT8;
+				INFOPLIST_FILE = "Aquarium Aquameter Tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		241544EA1FD11D1C007E08EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y692F89PT8;
+				INFOPLIST_FILE = "Aquarium Aquameter Tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		241544EC1FD11D1C007E08EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y692F89PT8;
+				INFOPLIST_FILE = "Aquarium Aquameter TrackerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aquarium Aquameter Tracker.app/Aquarium Aquameter Tracker";
+			};
+			name = Debug;
+		};
+		241544ED1FD11D1C007E08EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y692F89PT8;
+				INFOPLIST_FILE = "Aquarium Aquameter TrackerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aquarium Aquameter Tracker.app/Aquarium Aquameter Tracker";
+			};
+			name = Release;
+		};
+		241544EF1FD11D1C007E08EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y692F89PT8;
+				INFOPLIST_FILE = "Aquarium Aquameter TrackerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aquarium Aquameter Tracker";
+			};
+			name = Debug;
+		};
+		241544F01FD11D1C007E08EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y692F89PT8;
+				INFOPLIST_FILE = "Aquarium Aquameter TrackerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aquarium Aquameter Tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		241544B41FD11D1B007E08EF /* Build configuration list for PBXProject "Aquarium Aquameter Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				241544E61FD11D1C007E08EF /* Debug */,
+				241544E71FD11D1C007E08EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		241544E81FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				241544E91FD11D1C007E08EF /* Debug */,
+				241544EA1FD11D1C007E08EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		241544EB1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				241544EC1FD11D1C007E08EF /* Debug */,
+				241544ED1FD11D1C007E08EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		241544EE1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				241544EF1FD11D1C007E08EF /* Debug */,
+				241544F01FD11D1C007E08EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		241544C51FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				241544C61FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodel */,
+			);
+			currentVersion = 241544C61FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodel */;
+			path = Aquarium_Aquameter_Tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 241544B11FD11D1B007E08EF /* Project object */;
+}
