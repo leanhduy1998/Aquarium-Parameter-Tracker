@@ -1,0 +1,1008 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		060FCC90ADD503C28D94F26E16AA27A3 /* Pods-Aquarium Parameter TrackerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C7AD075BC08BA0B971E7A3330C5C5 /* Pods-Aquarium Parameter TrackerUITests-dummy.m */; };
+		09D9097831C9FEA183EF7A817447BB53 /* PNScatterChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AFB5D84E2725531FF428838FBB64CF /* PNScatterChartData.m */; };
+		0B63CB2121F7B6719EE5832DE968692C /* PNBar.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6F2BAEEB9515B4214E44350F0A2739 /* PNBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B892692A603D8BCC8A8F01DDD275C8B /* PNScatterChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1507FC9496DDD586777D2CA29F0277 /* PNScatterChart.m */; };
+		1577F10389CE25DBE59F9AE0FA20E2B3 /* PNRadarChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA65EE68268D7EBCE7D5FCDE571521D /* PNRadarChartDataItem.m */; };
+		25AB89F3A44780A3B663C620EB98B58A /* PNChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 077667A45156E6013A4CC3810B5DFF8E /* PNChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		321BAEC64F232461962FC2EA8C412FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
+		3E45CDF904843C63FCB380582ADF1F65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
+		44BEDBB67467AC59936D95E028317B51 /* PNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F48747A466804B717438D571CAD376 /* PNColor.m */; };
+		4A86BE0174028E1B00350960B760AF47 /* PNChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A9D46B2ECB0F325F2A8992B77F2914 /* PNChartLabel.m */; };
+		4E723CDC3A28C236857F43B7BEDDE104 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FE376AE987722A7429281E54612FD8 /* UICountingLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		55A68BEC6EE7918014C13E93A9712BA9 /* PNColor.h in Headers */ = {isa = PBXBuildFile; fileRef = FE67BE113810CD8CCEB84A4D8E02FEBA /* PNColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5663F974EC0C65D91071764B17F46CE7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */; };
+		575081A3B88FCC47681A8677B76CC0A8 /* PNScatterChartData.h in Headers */ = {isa = PBXBuildFile; fileRef = 43783B82CEC7090DDF491694247BDD60 /* PNScatterChartData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		615DEF6EC11FC2A1FD402B4D2A024769 /* PNGenericChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B167B64563AAA6C818B6B8F3ADE2C05 /* PNGenericChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		624A60476E1BB9046DB006F6CD501753 /* PNPieChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 672FD00458DCD17237710ABC5D268A70 /* PNPieChartDataItem.m */; };
+		63AB11A5E4106F71E026FDD3AE5C0819 /* PNLineChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 843D23F27500ECF889143044D904922A /* PNLineChartDataItem.m */; };
+		6857E6849C1FFA1607FC74148029092F /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DA66D8EAF62342E7B03A11E25B1E17 /* PNBar.m */; };
+		6B46ACEE4DD1DCDE7EC53A046D9C644F /* PNScatterChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B5EABC52FB7F3D74D82A0518558147 /* PNScatterChartDataItem.m */; };
+		6E59A19C433EF4F8C8A7673CF0DC2DC9 /* PNScatterChartDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BF62048CBE0DD7754266FC44EDAFA47 /* PNScatterChartDataItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FD810FC9EB0917CF0EE40E7D0130BEB /* PNLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4D9EB117EBF3D725D7286E6D3A5AA /* PNLineChart.m */; };
+		75597738D77785C9C4A5AA4AA7178C0C /* PNLineChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 861D4224B50BB80C2E4B396606294662 /* PNLineChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EED4B8422DBB5F789519374C8A5B6AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3292CC8DBF6352C2BF2B949CB548248F /* CoreGraphics.framework */; };
+		7FD5D44ADD57BF55545D50A9C3E2C9B3 /* PNLineChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = E0166A3280D1DBAEF0FB4A9DE0902435 /* PNLineChartData.m */; };
+		88F5F7C17B11961AB466F3D99A12D2BC /* Pods-Aquarium Parameter Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7728DB411A5CCE78629EA6F34C854AA /* Pods-Aquarium Parameter Tracker-dummy.m */; };
+		966EB87897305429CAEC8A2473086752 /* Pods-Aquarium Parameter TrackerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A100E08CAF336C14BE6E872EDFAAD6C0 /* Pods-Aquarium Parameter TrackerTests-dummy.m */; };
+		9CFECA7AD43C7E7B44B8E4BD0C0FC1AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
+		A354F7D1671D9863046A969B0994A700 /* PNCircleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C6931ED0144C2A12DC6410797C1064D3 /* PNCircleChart.m */; };
+		A40FD707AE7598006F7A29E56273AC92 /* PNPieChartDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C8785EF8936E57E4EFFBBD5260FA7FD /* PNPieChartDataItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A80255072C8A0497A05711E3CC00F66A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
+		AB02D77F0AB1E185B23D6F6A8C845C32 /* PNLineChartData.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EC255D5657028CDC100875FE4AC5A79 /* PNLineChartData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD7A45280067E32661352A300AAAB499 /* PNRadarChartDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DEE7488F4C866AAC35825860F6A5CC4 /* PNRadarChartDataItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3EB59B53EECE7B211D8945339AEBBC3 /* PNScatterChart.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB703809D3526B38D5D78772AB3770C /* PNScatterChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8D160C00EEAA55BFCA2125123F0C052 /* PNGenericChart.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7ACE62BBEF84458DDC48A24F187316 /* PNGenericChart.m */; };
+		BA23D123DB4E8DE763BA887B508E5A3D /* PNChartLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7EBA6205463A481498FA760D9394DD /* PNChartLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C060F2D088D4FF8A05515EA18F98228C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
+		C08D81AD3719A925A3462D346DEC1C0F /* PNChartDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A5D9D2BE83FB4C9DC21A87F59C6A41D /* PNChartDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1664321FFCA6026D6E85978A1AFE3EC /* PNRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A03B78A77F9A2CAF01680E69D1D8BC /* PNRadarChart.m */; };
+		D813E5D4CDB2B46BE2D9DF09A90AC2C3 /* PNPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D16AE85D05543BCD47C27C2D848C45 /* PNPieChart.m */; };
+		DB9E2926F467F925EF997634EA625F2B /* PNLineChartDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 71EEE4B94DE85EBCAD0C302CC1A06CB2 /* PNLineChartDataItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFC3C78711253349DB981066EDC6EF7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */; };
+		E98DF2071427D3532C78495B9DC145A2 /* PNCircleChart.h in Headers */ = {isa = PBXBuildFile; fileRef = FC2EE1CA3AEF53381A35B064EC0FE49F /* PNCircleChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC6C9B809A9A894CAB42FABA607299EE /* PNChart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D12277D7BC7D9A68ABDE67FCA9EACA /* PNChart-dummy.m */; };
+		EDCEB6D707FF2288C67076D61DC83359 /* UICountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD2F3AECB1E67F121FAE57BD3D659F3 /* UICountingLabel-dummy.m */; };
+		F611AA85C69D5CCCC4EBCEEA3FCE8CA4 /* PNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 63088BECF7A8A51D877B0B3C5D7CAE2B /* PNBarChart.m */; };
+		F66E801DEECA2340292AE69D7B102006 /* PNBarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F15495316606F36491D9BB516B5608A /* PNBarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8CC8930BD144EA6C090EC018555BA9D /* PNPieChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 7966FA604E1D644218FF6995FF345998 /* PNPieChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD8A7048D93A1CAC3C203F38A28D9F36 /* PNRadarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = E467262E798349E8159F13859A172289 /* PNRadarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEEF28820A2181068AD4D6012BC9F38C /* UICountingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 31FF104869672CA3E2542C04657892B3 /* UICountingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		530A310FBDF61FB7883D767175EC717D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB31A05090143EAF02A3DE187E2CBA22;
+			remoteInfo = UICountingLabel;
+		};
+		5A62397C1FF1127CBE66A2FEEFFB873B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D4A1B69057B2ACDCF903EC15F099E33;
+			remoteInfo = PNChart;
+		};
+		C9E220EA5540AEFB0ECD8F05CF8153CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB31A05090143EAF02A3DE187E2CBA22;
+			remoteInfo = UICountingLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		077667A45156E6013A4CC3810B5DFF8E /* PNChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNChart.h; path = PNChart/PNChart.h; sourceTree = "<group>"; };
+		0C445DDB309ACEEEC04AE7F6817AF557 /* Pods-Aquarium Parameter Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aquarium Parameter Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		0D48BC604EC19B56A547955C0E14652F /* Pods-Aquarium Parameter TrackerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Aquarium Parameter TrackerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		15A0E8B2F4F155D0793F04A5D6617C78 /* Pods-Aquarium Parameter TrackerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aquarium Parameter TrackerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		1BA4D9EB117EBF3D725D7286E6D3A5AA /* PNLineChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLineChart.m; path = PNChart/PNLineChart.m; sourceTree = "<group>"; };
+		21A9D46B2ECB0F325F2A8992B77F2914 /* PNChartLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNChartLabel.m; path = PNChart/PNChartLabel.m; sourceTree = "<group>"; };
+		24601660E30F901E6D2853C2F2E285C8 /* Pods-Aquarium Parameter Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Aquarium Parameter Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2B167B64563AAA6C818B6B8F3ADE2C05 /* PNGenericChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNGenericChart.h; path = PNChart/PNGenericChart.h; sourceTree = "<group>"; };
+		2BF62048CBE0DD7754266FC44EDAFA47 /* PNScatterChartDataItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNScatterChartDataItem.h; path = PNChart/PNScatterChartDataItem.h; sourceTree = "<group>"; };
+		2E1507FC9496DDD586777D2CA29F0277 /* PNScatterChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNScatterChart.m; path = PNChart/PNScatterChart.m; sourceTree = "<group>"; };
+		31FF104869672CA3E2542C04657892B3 /* UICountingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		3292CC8DBF6352C2BF2B949CB548248F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		32AFB5D84E2725531FF428838FBB64CF /* PNScatterChartData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNScatterChartData.m; path = PNChart/PNScatterChartData.m; sourceTree = "<group>"; };
+		34FE376AE987722A7429281E54612FD8 /* UICountingLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
+		3B7EBA6205463A481498FA760D9394DD /* PNChartLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNChartLabel.h; path = PNChart/PNChartLabel.h; sourceTree = "<group>"; };
+		3DAFE806D7E9C034293805AF1169F7B3 /* libPNChart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPNChart.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		43783B82CEC7090DDF491694247BDD60 /* PNScatterChartData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNScatterChartData.h; path = PNChart/PNScatterChartData.h; sourceTree = "<group>"; };
+		44DF126E4CC7E99CD76EA92E0195A444 /* Pods-Aquarium Parameter Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Aquarium Parameter Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		48B5EABC52FB7F3D74D82A0518558147 /* PNScatterChartDataItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNScatterChartDataItem.m; path = PNChart/PNScatterChartDataItem.m; sourceTree = "<group>"; };
+		56311BA627E72D5ACC36326324EA22F0 /* Pods-Aquarium Parameter TrackerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Aquarium Parameter TrackerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5D46B112EBB6527A8AE1EE4029146963 /* Pods-Aquarium Parameter TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aquarium Parameter TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5EC255D5657028CDC100875FE4AC5A79 /* PNLineChartData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLineChartData.h; path = PNChart/PNLineChartData.h; sourceTree = "<group>"; };
+		63088BECF7A8A51D877B0B3C5D7CAE2B /* PNBarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNBarChart.m; path = PNChart/PNBarChart.m; sourceTree = "<group>"; };
+		661141C53623134D866A9E16957D8506 /* Pods-Aquarium Parameter TrackerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Aquarium Parameter TrackerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		672FD00458DCD17237710ABC5D268A70 /* PNPieChartDataItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNPieChartDataItem.m; path = PNChart/PNPieChartDataItem.m; sourceTree = "<group>"; };
+		67D3104620370CEF3F808D743CDCA3D8 /* Pods-Aquarium Parameter TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aquarium Parameter TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7054FAC8A7F33F7953A2C9B3885A9613 /* libPods-Aquarium Parameter TrackerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Parameter TrackerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71EEE4B94DE85EBCAD0C302CC1A06CB2 /* PNLineChartDataItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLineChartDataItem.h; path = PNChart/PNLineChartDataItem.h; sourceTree = "<group>"; };
+		73D12277D7BC7D9A68ABDE67FCA9EACA /* PNChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PNChart-dummy.m"; sourceTree = "<group>"; };
+		75B587D717A6D0198057B5B73B1F6519 /* Pods-Aquarium Parameter TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aquarium Parameter TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		767F9F0FDF279701F8C52064F77CEC85 /* PNChart-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PNChart-prefix.pch"; sourceTree = "<group>"; };
+		7966FA604E1D644218FF6995FF345998 /* PNPieChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNPieChart.h; path = PNChart/PNPieChart.h; sourceTree = "<group>"; };
+		79B9D414866AB5D86B6BD193BA602A00 /* Pods-Aquarium Parameter TrackerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aquarium Parameter TrackerTests-resources.sh"; sourceTree = "<group>"; };
+		7E97ABC05D70A44B225E2D72B8C25100 /* Pods-Aquarium Parameter TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aquarium Parameter TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		7F15495316606F36491D9BB516B5608A /* PNBarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNBarChart.h; path = PNChart/PNBarChart.h; sourceTree = "<group>"; };
+		843D23F27500ECF889143044D904922A /* PNLineChartDataItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLineChartDataItem.m; path = PNChart/PNLineChartDataItem.m; sourceTree = "<group>"; };
+		861D4224B50BB80C2E4B396606294662 /* PNLineChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLineChart.h; path = PNChart/PNLineChart.h; sourceTree = "<group>"; };
+		8A24E126F1668CAF3DAEE00F9273D0C9 /* PNChart.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PNChart.xcconfig; sourceTree = "<group>"; };
+		8D0EE214B1AF880C505A05CE1C0C0CFB /* Pods-Aquarium Parameter TrackerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aquarium Parameter TrackerTests-frameworks.sh"; sourceTree = "<group>"; };
+		8DEE7488F4C866AAC35825860F6A5CC4 /* PNRadarChartDataItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNRadarChartDataItem.h; path = PNChart/PNRadarChartDataItem.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A5D9D2BE83FB4C9DC21A87F59C6A41D /* PNChartDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNChartDelegate.h; path = PNChart/PNChartDelegate.h; sourceTree = "<group>"; };
+		9C8785EF8936E57E4EFFBBD5260FA7FD /* PNPieChartDataItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNPieChartDataItem.h; path = PNChart/PNPieChartDataItem.h; sourceTree = "<group>"; };
+		A100E08CAF336C14BE6E872EDFAAD6C0 /* Pods-Aquarium Parameter TrackerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Aquarium Parameter TrackerTests-dummy.m"; sourceTree = "<group>"; };
+		A1C3FC4E72F1F9FA935D072FD9FD19EA /* libPods-Aquarium Parameter Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Parameter Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6D16AE85D05543BCD47C27C2D848C45 /* PNPieChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNPieChart.m; path = PNChart/PNPieChart.m; sourceTree = "<group>"; };
+		A7728DB411A5CCE78629EA6F34C854AA /* Pods-Aquarium Parameter Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Aquarium Parameter Tracker-dummy.m"; sourceTree = "<group>"; };
+		A9B422323F6E30830E6BB293DBA1EB01 /* UICountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICountingLabel.xcconfig; sourceTree = "<group>"; };
+		AA18F0464601E41BC01FBFAB02F969B2 /* UICountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICountingLabel-prefix.pch"; sourceTree = "<group>"; };
+		ACF253BC1F56F98EED81EDA690152CAB /* Pods-Aquarium Parameter TrackerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aquarium Parameter TrackerUITests-resources.sh"; sourceTree = "<group>"; };
+		B47CFA8989BE157913E68C2A63060F61 /* libPods-Aquarium Parameter TrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Parameter TrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A03B78A77F9A2CAF01680E69D1D8BC /* PNRadarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNRadarChart.m; path = PNChart/PNRadarChart.m; sourceTree = "<group>"; };
+		BE7ACE62BBEF84458DDC48A24F187316 /* PNGenericChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNGenericChart.m; path = PNChart/PNGenericChart.m; sourceTree = "<group>"; };
+		BF94C7797F42D04555957F0AFE59101B /* Pods-Aquarium Parameter Tracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aquarium Parameter Tracker-frameworks.sh"; sourceTree = "<group>"; };
+		BFB703809D3526B38D5D78772AB3770C /* PNScatterChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNScatterChart.h; path = PNChart/PNScatterChart.h; sourceTree = "<group>"; };
+		C6931ED0144C2A12DC6410797C1064D3 /* PNCircleChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNCircleChart.m; path = PNChart/PNCircleChart.m; sourceTree = "<group>"; };
+		D2F48747A466804B717438D571CAD376 /* PNColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNColor.m; path = PNChart/PNColor.m; sourceTree = "<group>"; };
+		DBD2F3AECB1E67F121FAE57BD3D659F3 /* UICountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICountingLabel-dummy.m"; sourceTree = "<group>"; };
+		E0166A3280D1DBAEF0FB4A9DE0902435 /* PNLineChartData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLineChartData.m; path = PNChart/PNLineChartData.m; sourceTree = "<group>"; };
+		E2DA66D8EAF62342E7B03A11E25B1E17 /* PNBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNBar.m; path = PNChart/PNBar.m; sourceTree = "<group>"; };
+		E467262E798349E8159F13859A172289 /* PNRadarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNRadarChart.h; path = PNChart/PNRadarChart.h; sourceTree = "<group>"; };
+		E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		E92C7AD075BC08BA0B971E7A3330C5C5 /* Pods-Aquarium Parameter TrackerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Aquarium Parameter TrackerUITests-dummy.m"; sourceTree = "<group>"; };
+		ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EDE19E64A6193734D5885B77F2559856 /* libUICountingLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUICountingLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6F2BAEEB9515B4214E44350F0A2739 /* PNBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNBar.h; path = PNChart/PNBar.h; sourceTree = "<group>"; };
+		EFBB78A50A23C8A0C4EE9A13F09738A9 /* Pods-Aquarium Parameter TrackerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Aquarium Parameter TrackerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F986B447493F0715D59F9E10621E8522 /* Pods-Aquarium Parameter Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aquarium Parameter Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		FBA65EE68268D7EBCE7D5FCDE571521D /* PNRadarChartDataItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNRadarChartDataItem.m; path = PNChart/PNRadarChartDataItem.m; sourceTree = "<group>"; };
+		FC2EE1CA3AEF53381A35B064EC0FE49F /* PNCircleChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNCircleChart.h; path = PNChart/PNCircleChart.h; sourceTree = "<group>"; };
+		FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FDC839FF98181A38017BEC6829923E67 /* Pods-Aquarium Parameter Tracker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aquarium Parameter Tracker-resources.sh"; sourceTree = "<group>"; };
+		FE67BE113810CD8CCEB84A4D8E02FEBA /* PNColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNColor.h; path = PNChart/PNColor.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89010C3374E413433CB78B771911DDE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFECA7AD43C7E7B44B8E4BD0C0FC1AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCF1CC74EE20DB1DCD789016C552B63A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A80255072C8A0497A05711E3CC00F66A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E43AD1EB2F21AC1150E6E5A694FEBFE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				321BAEC64F232461962FC2EA8C412FCA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9A6B48034000BDB5CF8C1AFF8AEE7FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C060F2D088D4FF8A05515EA18F98228C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2A8C1F4EBC9C0AA630A008C2EE83185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EED4B8422DBB5F789519374C8A5B6AD /* CoreGraphics.framework in Frameworks */,
+				3E45CDF904843C63FCB380582ADF1F65 /* Foundation.framework in Frameworks */,
+				5663F974EC0C65D91071764B17F46CE7 /* QuartzCore.framework in Frameworks */,
+				DFC3C78711253349DB981066EDC6EF7B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F8FEF3140598EAB2B3D56BB84B5389A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2086871844CA3FE6FAB68E6EF6196EB4 /* UICountingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				31FF104869672CA3E2542C04657892B3 /* UICountingLabel.h */,
+				34FE376AE987722A7429281E54612FD8 /* UICountingLabel.m */,
+				5A9ADB26076401C57BA9F24332911F41 /* Support Files */,
+			);
+			path = UICountingLabel;
+			sourceTree = "<group>";
+		};
+		20D447360E71C78A51EE995073DB574C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F15A31FFD19BDEC7C9A9CBE1A16F0A3F /* PNChart */,
+				2086871844CA3FE6FAB68E6EF6196EB4 /* UICountingLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2D554871BE82423BEAC8465D04C09BF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DAFE806D7E9C034293805AF1169F7B3 /* libPNChart.a */,
+				A1C3FC4E72F1F9FA935D072FD9FD19EA /* libPods-Aquarium Parameter Tracker.a */,
+				B47CFA8989BE157913E68C2A63060F61 /* libPods-Aquarium Parameter TrackerTests.a */,
+				7054FAC8A7F33F7953A2C9B3885A9613 /* libPods-Aquarium Parameter TrackerUITests.a */,
+				EDE19E64A6193734D5885B77F2559856 /* libUICountingLabel.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A9ADB26076401C57BA9F24332911F41 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9B422323F6E30830E6BB293DBA1EB01 /* UICountingLabel.xcconfig */,
+				DBD2F3AECB1E67F121FAE57BD3D659F3 /* UICountingLabel-dummy.m */,
+				AA18F0464601E41BC01FBFAB02F969B2 /* UICountingLabel-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UICountingLabel";
+			sourceTree = "<group>";
+		};
+		71C37F89E264D6EAFFAB5F40762F07C9 /* Pods-Aquarium Parameter TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D48BC604EC19B56A547955C0E14652F /* Pods-Aquarium Parameter TrackerTests-acknowledgements.markdown */,
+				661141C53623134D866A9E16957D8506 /* Pods-Aquarium Parameter TrackerTests-acknowledgements.plist */,
+				A100E08CAF336C14BE6E872EDFAAD6C0 /* Pods-Aquarium Parameter TrackerTests-dummy.m */,
+				8D0EE214B1AF880C505A05CE1C0C0CFB /* Pods-Aquarium Parameter TrackerTests-frameworks.sh */,
+				79B9D414866AB5D86B6BD193BA602A00 /* Pods-Aquarium Parameter TrackerTests-resources.sh */,
+				67D3104620370CEF3F808D743CDCA3D8 /* Pods-Aquarium Parameter TrackerTests.debug.xcconfig */,
+				7E97ABC05D70A44B225E2D72B8C25100 /* Pods-Aquarium Parameter TrackerTests.release.xcconfig */,
+			);
+			name = "Pods-Aquarium Parameter TrackerTests";
+			path = "Target Support Files/Pods-Aquarium Parameter TrackerTests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				20D447360E71C78A51EE995073DB574C /* Pods */,
+				2D554871BE82423BEAC8465D04C09BF2 /* Products */,
+				C1F4D93D842CBBE7E6DEE8FBAA062FDE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8F8FEF3140598EAB2B3D56BB84B5389A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3292CC8DBF6352C2BF2B949CB548248F /* CoreGraphics.framework */,
+				ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */,
+				E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */,
+				FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		94985D300ED8A937E458353DEB9F80F4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A24E126F1668CAF3DAEE00F9273D0C9 /* PNChart.xcconfig */,
+				73D12277D7BC7D9A68ABDE67FCA9EACA /* PNChart-dummy.m */,
+				767F9F0FDF279701F8C52064F77CEC85 /* PNChart-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PNChart";
+			sourceTree = "<group>";
+		};
+		BFFAB53A7383AA4D71E4F4B70F612300 /* Pods-Aquarium Parameter Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				24601660E30F901E6D2853C2F2E285C8 /* Pods-Aquarium Parameter Tracker-acknowledgements.markdown */,
+				44DF126E4CC7E99CD76EA92E0195A444 /* Pods-Aquarium Parameter Tracker-acknowledgements.plist */,
+				A7728DB411A5CCE78629EA6F34C854AA /* Pods-Aquarium Parameter Tracker-dummy.m */,
+				BF94C7797F42D04555957F0AFE59101B /* Pods-Aquarium Parameter Tracker-frameworks.sh */,
+				FDC839FF98181A38017BEC6829923E67 /* Pods-Aquarium Parameter Tracker-resources.sh */,
+				0C445DDB309ACEEEC04AE7F6817AF557 /* Pods-Aquarium Parameter Tracker.debug.xcconfig */,
+				F986B447493F0715D59F9E10621E8522 /* Pods-Aquarium Parameter Tracker.release.xcconfig */,
+			);
+			name = "Pods-Aquarium Parameter Tracker";
+			path = "Target Support Files/Pods-Aquarium Parameter Tracker";
+			sourceTree = "<group>";
+		};
+		C1601C411FB8074F5D374BD31F34E4A4 /* Pods-Aquarium Parameter TrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				56311BA627E72D5ACC36326324EA22F0 /* Pods-Aquarium Parameter TrackerUITests-acknowledgements.markdown */,
+				EFBB78A50A23C8A0C4EE9A13F09738A9 /* Pods-Aquarium Parameter TrackerUITests-acknowledgements.plist */,
+				E92C7AD075BC08BA0B971E7A3330C5C5 /* Pods-Aquarium Parameter TrackerUITests-dummy.m */,
+				15A0E8B2F4F155D0793F04A5D6617C78 /* Pods-Aquarium Parameter TrackerUITests-frameworks.sh */,
+				ACF253BC1F56F98EED81EDA690152CAB /* Pods-Aquarium Parameter TrackerUITests-resources.sh */,
+				5D46B112EBB6527A8AE1EE4029146963 /* Pods-Aquarium Parameter TrackerUITests.debug.xcconfig */,
+				75B587D717A6D0198057B5B73B1F6519 /* Pods-Aquarium Parameter TrackerUITests.release.xcconfig */,
+			);
+			name = "Pods-Aquarium Parameter TrackerUITests";
+			path = "Target Support Files/Pods-Aquarium Parameter TrackerUITests";
+			sourceTree = "<group>";
+		};
+		C1F4D93D842CBBE7E6DEE8FBAA062FDE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFFAB53A7383AA4D71E4F4B70F612300 /* Pods-Aquarium Parameter Tracker */,
+				71C37F89E264D6EAFFAB5F40762F07C9 /* Pods-Aquarium Parameter TrackerTests */,
+				C1601C411FB8074F5D374BD31F34E4A4 /* Pods-Aquarium Parameter TrackerUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F15A31FFD19BDEC7C9A9CBE1A16F0A3F /* PNChart */ = {
+			isa = PBXGroup;
+			children = (
+				EE6F2BAEEB9515B4214E44350F0A2739 /* PNBar.h */,
+				E2DA66D8EAF62342E7B03A11E25B1E17 /* PNBar.m */,
+				7F15495316606F36491D9BB516B5608A /* PNBarChart.h */,
+				63088BECF7A8A51D877B0B3C5D7CAE2B /* PNBarChart.m */,
+				077667A45156E6013A4CC3810B5DFF8E /* PNChart.h */,
+				9A5D9D2BE83FB4C9DC21A87F59C6A41D /* PNChartDelegate.h */,
+				3B7EBA6205463A481498FA760D9394DD /* PNChartLabel.h */,
+				21A9D46B2ECB0F325F2A8992B77F2914 /* PNChartLabel.m */,
+				FC2EE1CA3AEF53381A35B064EC0FE49F /* PNCircleChart.h */,
+				C6931ED0144C2A12DC6410797C1064D3 /* PNCircleChart.m */,
+				FE67BE113810CD8CCEB84A4D8E02FEBA /* PNColor.h */,
+				D2F48747A466804B717438D571CAD376 /* PNColor.m */,
+				2B167B64563AAA6C818B6B8F3ADE2C05 /* PNGenericChart.h */,
+				BE7ACE62BBEF84458DDC48A24F187316 /* PNGenericChart.m */,
+				861D4224B50BB80C2E4B396606294662 /* PNLineChart.h */,
+				1BA4D9EB117EBF3D725D7286E6D3A5AA /* PNLineChart.m */,
+				5EC255D5657028CDC100875FE4AC5A79 /* PNLineChartData.h */,
+				E0166A3280D1DBAEF0FB4A9DE0902435 /* PNLineChartData.m */,
+				71EEE4B94DE85EBCAD0C302CC1A06CB2 /* PNLineChartDataItem.h */,
+				843D23F27500ECF889143044D904922A /* PNLineChartDataItem.m */,
+				7966FA604E1D644218FF6995FF345998 /* PNPieChart.h */,
+				A6D16AE85D05543BCD47C27C2D848C45 /* PNPieChart.m */,
+				9C8785EF8936E57E4EFFBBD5260FA7FD /* PNPieChartDataItem.h */,
+				672FD00458DCD17237710ABC5D268A70 /* PNPieChartDataItem.m */,
+				E467262E798349E8159F13859A172289 /* PNRadarChart.h */,
+				B8A03B78A77F9A2CAF01680E69D1D8BC /* PNRadarChart.m */,
+				8DEE7488F4C866AAC35825860F6A5CC4 /* PNRadarChartDataItem.h */,
+				FBA65EE68268D7EBCE7D5FCDE571521D /* PNRadarChartDataItem.m */,
+				BFB703809D3526B38D5D78772AB3770C /* PNScatterChart.h */,
+				2E1507FC9496DDD586777D2CA29F0277 /* PNScatterChart.m */,
+				43783B82CEC7090DDF491694247BDD60 /* PNScatterChartData.h */,
+				32AFB5D84E2725531FF428838FBB64CF /* PNScatterChartData.m */,
+				2BF62048CBE0DD7754266FC44EDAFA47 /* PNScatterChartDataItem.h */,
+				48B5EABC52FB7F3D74D82A0518558147 /* PNScatterChartDataItem.m */,
+				94985D300ED8A937E458353DEB9F80F4 /* Support Files */,
+			);
+			path = PNChart;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		92AA2A7799626C9AF8697C31F0D83095 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B63CB2121F7B6719EE5832DE968692C /* PNBar.h in Headers */,
+				F66E801DEECA2340292AE69D7B102006 /* PNBarChart.h in Headers */,
+				25AB89F3A44780A3B663C620EB98B58A /* PNChart.h in Headers */,
+				C08D81AD3719A925A3462D346DEC1C0F /* PNChartDelegate.h in Headers */,
+				BA23D123DB4E8DE763BA887B508E5A3D /* PNChartLabel.h in Headers */,
+				E98DF2071427D3532C78495B9DC145A2 /* PNCircleChart.h in Headers */,
+				55A68BEC6EE7918014C13E93A9712BA9 /* PNColor.h in Headers */,
+				615DEF6EC11FC2A1FD402B4D2A024769 /* PNGenericChart.h in Headers */,
+				75597738D77785C9C4A5AA4AA7178C0C /* PNLineChart.h in Headers */,
+				AB02D77F0AB1E185B23D6F6A8C845C32 /* PNLineChartData.h in Headers */,
+				DB9E2926F467F925EF997634EA625F2B /* PNLineChartDataItem.h in Headers */,
+				F8CC8930BD144EA6C090EC018555BA9D /* PNPieChart.h in Headers */,
+				A40FD707AE7598006F7A29E56273AC92 /* PNPieChartDataItem.h in Headers */,
+				FD8A7048D93A1CAC3C203F38A28D9F36 /* PNRadarChart.h in Headers */,
+				AD7A45280067E32661352A300AAAB499 /* PNRadarChartDataItem.h in Headers */,
+				B3EB59B53EECE7B211D8945339AEBBC3 /* PNScatterChart.h in Headers */,
+				575081A3B88FCC47681A8677B76CC0A8 /* PNScatterChartData.h in Headers */,
+				6E59A19C433EF4F8C8A7673CF0DC2DC9 /* PNScatterChartDataItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6471DAA9D3110CD855BE6DFA4F1E48C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEEF28820A2181068AD4D6012BC9F38C /* UICountingLabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3FC585EBC62E47F1D2582D5721C3EB41 /* Pods-Aquarium Parameter TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A6877FE7598322FEECBA654857AB4DB /* Build configuration list for PBXNativeTarget "Pods-Aquarium Parameter TrackerTests" */;
+			buildPhases = (
+				C0813A99203F0EA729DBE6557D48CD70 /* Sources */,
+				CCF1CC74EE20DB1DCD789016C552B63A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Aquarium Parameter TrackerTests";
+			productName = "Pods-Aquarium Parameter TrackerTests";
+			productReference = B47CFA8989BE157913E68C2A63060F61 /* libPods-Aquarium Parameter TrackerTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9D4A1B69057B2ACDCF903EC15F099E33 /* PNChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79DB03F4E7FF086B7FFD5D5B6FAE1668 /* Build configuration list for PBXNativeTarget "PNChart" */;
+			buildPhases = (
+				E8AD73929E5F8B79DC17E8D96855D318 /* Sources */,
+				F2A8C1F4EBC9C0AA630A008C2EE83185 /* Frameworks */,
+				92AA2A7799626C9AF8697C31F0D83095 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFE21E14DF63D0C035C8B24290F148D1 /* PBXTargetDependency */,
+			);
+			name = PNChart;
+			productName = PNChart;
+			productReference = 3DAFE806D7E9C034293805AF1169F7B3 /* libPNChart.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AE2FDA3BDAD02731777B0D0BA62C8300 /* Pods-Aquarium Parameter TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47FFD19E3682EC9EFB97CFE486CEFBBE /* Build configuration list for PBXNativeTarget "Pods-Aquarium Parameter TrackerUITests" */;
+			buildPhases = (
+				B1409C8F660D42F8DCC1BCD3CD63A2CB /* Sources */,
+				E43AD1EB2F21AC1150E6E5A694FEBFE3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Aquarium Parameter TrackerUITests";
+			productName = "Pods-Aquarium Parameter TrackerUITests";
+			productReference = 7054FAC8A7F33F7953A2C9B3885A9613 /* libPods-Aquarium Parameter TrackerUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D147CE4C7B23C78D124AB15823A1DA97 /* Pods-Aquarium Parameter Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BB7A1B5E70D5EE40C1873D2F8CCF17E /* Build configuration list for PBXNativeTarget "Pods-Aquarium Parameter Tracker" */;
+			buildPhases = (
+				3AF01CC31C37309AD4F36259DB4554DD /* Sources */,
+				E9A6B48034000BDB5CF8C1AFF8AEE7FC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42082A77140E1E71D2C78B354B17BDD6 /* PBXTargetDependency */,
+				A7C14362F502D796CB0B26ABBBFA9AA2 /* PBXTargetDependency */,
+			);
+			name = "Pods-Aquarium Parameter Tracker";
+			productName = "Pods-Aquarium Parameter Tracker";
+			productReference = A1C3FC4E72F1F9FA935D072FD9FD19EA /* libPods-Aquarium Parameter Tracker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB31A05090143EAF02A3DE187E2CBA22 /* UICountingLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9F6A3B43F78D2C2B16A55AF725B53A /* Build configuration list for PBXNativeTarget "UICountingLabel" */;
+			buildPhases = (
+				45C44BD1A93E0267EE3D09458AE97D15 /* Sources */,
+				89010C3374E413433CB78B771911DDE6 /* Frameworks */,
+				E6471DAA9D3110CD855BE6DFA4F1E48C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UICountingLabel;
+			productName = UICountingLabel;
+			productReference = EDE19E64A6193734D5885B77F2559856 /* libUICountingLabel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0910;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2D554871BE82423BEAC8465D04C09BF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D4A1B69057B2ACDCF903EC15F099E33 /* PNChart */,
+				D147CE4C7B23C78D124AB15823A1DA97 /* Pods-Aquarium Parameter Tracker */,
+				3FC585EBC62E47F1D2582D5721C3EB41 /* Pods-Aquarium Parameter TrackerTests */,
+				AE2FDA3BDAD02731777B0D0BA62C8300 /* Pods-Aquarium Parameter TrackerUITests */,
+				EB31A05090143EAF02A3DE187E2CBA22 /* UICountingLabel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AF01CC31C37309AD4F36259DB4554DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88F5F7C17B11961AB466F3D99A12D2BC /* Pods-Aquarium Parameter Tracker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45C44BD1A93E0267EE3D09458AE97D15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCEB6D707FF2288C67076D61DC83359 /* UICountingLabel-dummy.m in Sources */,
+				4E723CDC3A28C236857F43B7BEDDE104 /* UICountingLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1409C8F660D42F8DCC1BCD3CD63A2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				060FCC90ADD503C28D94F26E16AA27A3 /* Pods-Aquarium Parameter TrackerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0813A99203F0EA729DBE6557D48CD70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				966EB87897305429CAEC8A2473086752 /* Pods-Aquarium Parameter TrackerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8AD73929E5F8B79DC17E8D96855D318 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6857E6849C1FFA1607FC74148029092F /* PNBar.m in Sources */,
+				F611AA85C69D5CCCC4EBCEEA3FCE8CA4 /* PNBarChart.m in Sources */,
+				EC6C9B809A9A894CAB42FABA607299EE /* PNChart-dummy.m in Sources */,
+				4A86BE0174028E1B00350960B760AF47 /* PNChartLabel.m in Sources */,
+				A354F7D1671D9863046A969B0994A700 /* PNCircleChart.m in Sources */,
+				44BEDBB67467AC59936D95E028317B51 /* PNColor.m in Sources */,
+				B8D160C00EEAA55BFCA2125123F0C052 /* PNGenericChart.m in Sources */,
+				6FD810FC9EB0917CF0EE40E7D0130BEB /* PNLineChart.m in Sources */,
+				7FD5D44ADD57BF55545D50A9C3E2C9B3 /* PNLineChartData.m in Sources */,
+				63AB11A5E4106F71E026FDD3AE5C0819 /* PNLineChartDataItem.m in Sources */,
+				D813E5D4CDB2B46BE2D9DF09A90AC2C3 /* PNPieChart.m in Sources */,
+				624A60476E1BB9046DB006F6CD501753 /* PNPieChartDataItem.m in Sources */,
+				D1664321FFCA6026D6E85978A1AFE3EC /* PNRadarChart.m in Sources */,
+				1577F10389CE25DBE59F9AE0FA20E2B3 /* PNRadarChartDataItem.m in Sources */,
+				0B892692A603D8BCC8A8F01DDD275C8B /* PNScatterChart.m in Sources */,
+				09D9097831C9FEA183EF7A817447BB53 /* PNScatterChartData.m in Sources */,
+				6B46ACEE4DD1DCDE7EC53A046D9C644F /* PNScatterChartDataItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42082A77140E1E71D2C78B354B17BDD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PNChart;
+			target = 9D4A1B69057B2ACDCF903EC15F099E33 /* PNChart */;
+			targetProxy = 5A62397C1FF1127CBE66A2FEEFFB873B /* PBXContainerItemProxy */;
+		};
+		A7C14362F502D796CB0B26ABBBFA9AA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UICountingLabel;
+			target = EB31A05090143EAF02A3DE187E2CBA22 /* UICountingLabel */;
+			targetProxy = 530A310FBDF61FB7883D767175EC717D /* PBXContainerItemProxy */;
+		};
+		EFE21E14DF63D0C035C8B24290F148D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UICountingLabel;
+			target = EB31A05090143EAF02A3DE187E2CBA22 /* UICountingLabel */;
+			targetProxy = C9E220EA5540AEFB0ECD8F05CF8153CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		15A360774D2F786A856EB532F86BA655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C445DDB309ACEEEC04AE7F6817AF557 /* Pods-Aquarium Parameter Tracker.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		176E568C7AC762E0B051A1C642986B6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67D3104620370CEF3F808D743CDCA3D8 /* Pods-Aquarium Parameter TrackerTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CC8B1085852132CDBDEE31D12140380 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F986B447493F0715D59F9E10621E8522 /* Pods-Aquarium Parameter Tracker.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43386A6E2C12FB16640B8708F7790674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A24E126F1668CAF3DAEE00F9273D0C9 /* PNChart.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PNChart/PNChart-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CD35095E44CC22EDEE3347E748551B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9B422323F6E30830E6BB293DBA1EB01 /* UICountingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/UICountingLabel/UICountingLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		621AB785940626574F07364CB14760E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7EC72E9965038FEA3C22839A33B3D6AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9B422323F6E30830E6BB293DBA1EB01 /* UICountingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/UICountingLabel/UICountingLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9750976A35A251F9C5C9BD4C5B0FD9E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75B587D717A6D0198057B5B73B1F6519 /* Pods-Aquarium Parameter TrackerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B57C09D404C607DDE283C5C44183B2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B83AA88EBF40A2A3D49A7ED01B104E95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D46B112EBB6527A8AE1EE4029146963 /* Pods-Aquarium Parameter TrackerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3652A81854B7DBEB9AD94D2F9D8CFCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E97ABC05D70A44B225E2D72B8C25100 /* Pods-Aquarium Parameter TrackerTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8B6CD768BE13427DCDDE9B795121B1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A24E126F1668CAF3DAEE00F9273D0C9 /* PNChart.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PNChart/PNChart-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57C09D404C607DDE283C5C44183B2A1 /* Debug */,
+				621AB785940626574F07364CB14760E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47FFD19E3682EC9EFB97CFE486CEFBBE /* Build configuration list for PBXNativeTarget "Pods-Aquarium Parameter TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B83AA88EBF40A2A3D49A7ED01B104E95 /* Debug */,
+				9750976A35A251F9C5C9BD4C5B0FD9E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A6877FE7598322FEECBA654857AB4DB /* Build configuration list for PBXNativeTarget "Pods-Aquarium Parameter TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				176E568C7AC762E0B051A1C642986B6C /* Debug */,
+				F3652A81854B7DBEB9AD94D2F9D8CFCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79DB03F4E7FF086B7FFD5D5B6FAE1668 /* Build configuration list for PBXNativeTarget "PNChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B6CD768BE13427DCDDE9B795121B1D /* Debug */,
+				43386A6E2C12FB16640B8708F7790674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BB7A1B5E70D5EE40C1873D2F8CCF17E /* Build configuration list for PBXNativeTarget "Pods-Aquarium Parameter Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A360774D2F786A856EB532F86BA655 /* Debug */,
+				2CC8B1085852132CDBDEE31D12140380 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9F6A3B43F78D2C2B16A55AF725B53A /* Build configuration list for PBXNativeTarget "UICountingLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CD35095E44CC22EDEE3347E748551B3 /* Debug */,
+				7EC72E9965038FEA3C22839A33B3D6AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

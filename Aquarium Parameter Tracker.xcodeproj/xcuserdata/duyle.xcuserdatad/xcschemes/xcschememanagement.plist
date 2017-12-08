@@ -4,10 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Aquarium Aquameter Tracker.xcscheme</key>
+		<key>Aquarium Parameter Tracker 2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
+		</dict>
+		<key>Aquarium Parameter Tracker.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>241544B81FD11D1B007E08EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>241544D31FD11D1C007E08EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>241544DE1FD11D1C007E08EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

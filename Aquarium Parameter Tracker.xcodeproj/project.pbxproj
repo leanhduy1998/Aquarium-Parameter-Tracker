@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		241544BE1FD11D1C007E08EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544BD1FD11D1C007E08EF /* AppDelegate.m */; };
-		241544C11FD11D1C007E08EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544C01FD11D1C007E08EF /* ViewController.m */; };
+		241544C11FD11D1C007E08EF /* PHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544C01FD11D1C007E08EF /* PHViewController.m */; };
 		241544C41FD11D1C007E08EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241544C21FD11D1C007E08EF /* Main.storyboard */; };
 		241544C71FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 241544C51FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld */; };
 		241544C91FD11D1C007E08EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241544C81FD11D1C007E08EF /* Assets.xcassets */; };
@@ -18,8 +18,10 @@
 		241544E41FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544E31FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m */; };
 		243DE3AE1FD39B9400369DFC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243DE3AD1FD39B9400369DFC /* DetailViewController.m */; };
 		24FDFC691FD28AC1005DE267 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FDFC681FD28AC1005DE267 /* CoreData.framework */; };
-		7176B021D84431DF5073DA57 /* libPods-Aquarium Aquameter Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F19F038B2DA737DC9E6887 /* libPods-Aquarium Aquameter Tracker.a */; };
 		9CCC2E1743A9C6C3B82BC1BE /* libPods-Aquarium Aquameter TrackerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D935C964DCBAC44097F32305 /* libPods-Aquarium Aquameter TrackerUITests.a */; };
+		B8607986F586F6AD71F944C7 /* libPods-Aquarium Parameter TrackerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0AB407D7A23FC7A6985F54 /* libPods-Aquarium Parameter TrackerUITests.a */; };
+		CD0153670928FD49FAF6B121 /* libPods-Aquarium Parameter Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCAF67C4CCEDF448A7496F3 /* libPods-Aquarium Parameter Tracker.a */; };
+		CEB15892D8C93FE271BBE69F /* libPods-Aquarium Parameter TrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4500174673230FFCB07A0 /* libPods-Aquarium Parameter TrackerTests.a */; };
 		DC417A55D74C4FF86DCD6292 /* libPods-Aquarium Aquameter TrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1371F60788AC7BBF710DB920 /* libPods-Aquarium Aquameter TrackerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -41,33 +43,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01C4500174673230FFCB07A0 /* libPods-Aquarium Parameter TrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Parameter TrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1371F60788AC7BBF710DB920 /* libPods-Aquarium Aquameter TrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Aquameter TrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		241544B91FD11D1B007E08EF /* Aquarium Aquameter Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aquarium Aquameter Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE1F3696F0A7ACA6B70A525 /* Pods-Aquarium Parameter TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Parameter TrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Parameter TrackerTests/Pods-Aquarium Parameter TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		241544B91FD11D1B007E08EF /* Aquarium Parameter Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aquarium Parameter Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		241544BC1FD11D1C007E08EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		241544BD1FD11D1C007E08EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		241544BF1FD11D1C007E08EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		241544C01FD11D1C007E08EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		241544BF1FD11D1C007E08EF /* PHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHViewController.h; sourceTree = "<group>"; };
+		241544C01FD11D1C007E08EF /* PHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHViewController.m; sourceTree = "<group>"; };
 		241544C31FD11D1C007E08EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		241544C61FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aquarium_Aquameter_Tracker.xcdatamodel; sourceTree = "<group>"; };
 		241544C81FD11D1C007E08EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		241544CB1FD11D1C007E08EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		241544CD1FD11D1C007E08EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		241544CE1FD11D1C007E08EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		241544D41FD11D1C007E08EF /* Aquarium Aquameter TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aquarium Aquameter TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		241544D41FD11D1C007E08EF /* Aquarium Parameter TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aquarium Parameter TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		241544D81FD11D1C007E08EF /* Aquarium_Aquameter_TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aquarium_Aquameter_TrackerTests.m; sourceTree = "<group>"; };
 		241544DA1FD11D1C007E08EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		241544DF1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aquarium Aquameter TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		241544DF1FD11D1C007E08EF /* Aquarium Parameter TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aquarium Parameter TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		241544E31FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aquarium_Aquameter_TrackerUITests.m; sourceTree = "<group>"; };
 		241544E51FD11D1C007E08EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243DE3A51FD3753100369DFC /* Aquarium_Aquameter_Tracker 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Aquarium_Aquameter_Tracker 2.xcdatamodel"; sourceTree = "<group>"; };
 		243DE3AC1FD39B9400369DFC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		243DE3AD1FD39B9400369DFC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		24FDFC681FD28AC1005DE267 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2F44BE2AAD9BC7B00FA3B3EE /* Pods-Aquarium Parameter TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Parameter TrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Parameter TrackerTests/Pods-Aquarium Parameter TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		38AC58ED59DFC2BDD8B4BDA0 /* Pods-Aquarium Parameter TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Parameter TrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Parameter TrackerUITests/Pods-Aquarium Parameter TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ED1B210D85BD904A156D023 /* Pods-Aquarium Aquameter TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Aquameter TrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Aquameter TrackerTests/Pods-Aquarium Aquameter TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5AF7ED0BB2C9B93829BD238B /* Pods-Aquarium Parameter Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Parameter Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Parameter Tracker/Pods-Aquarium Parameter Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		5B0AB407D7A23FC7A6985F54 /* libPods-Aquarium Parameter TrackerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Parameter TrackerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DCAF67C4CCEDF448A7496F3 /* libPods-Aquarium Parameter Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Parameter Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FC76A0905DC0DAC1209F8FD /* Pods-Aquarium Parameter TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Parameter TrackerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Parameter TrackerUITests/Pods-Aquarium Parameter TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6580D9B3B7C8F30AB2E22D89 /* Pods-Aquarium Aquameter TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Aquameter TrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Aquameter TrackerTests/Pods-Aquarium Aquameter TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		7CB6D3C7315734B70BEB7731 /* Pods-Aquarium Aquameter Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Aquameter Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Aquameter Tracker/Pods-Aquarium Aquameter Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		82CC45B820DE8028A195C076 /* Pods-Aquarium Aquameter TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Aquameter TrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Aquameter TrackerUITests/Pods-Aquarium Aquameter TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA01D6D2B3253F9AB9F7D67C /* Pods-Aquarium Aquameter TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Aquameter TrackerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Aquameter TrackerUITests/Pods-Aquarium Aquameter TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BF4AE1A251AAFAA056F45D6A /* Pods-Aquarium Parameter Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Parameter Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Parameter Tracker/Pods-Aquarium Parameter Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		CCF57489781E3E641D5FEBF3 /* Pods-Aquarium Aquameter Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Aquameter Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Aquameter Tracker/Pods-Aquarium Aquameter Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		D935C964DCBAC44097F32305 /* libPods-Aquarium Aquameter TrackerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Aquameter TrackerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F19F038B2DA737DC9E6887 /* libPods-Aquarium Aquameter Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Aquameter Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24FDFC691FD28AC1005DE267 /* CoreData.framework in Frameworks */,
-				7176B021D84431DF5073DA57 /* libPods-Aquarium Aquameter Tracker.a in Frameworks */,
+				CD0153670928FD49FAF6B121 /* libPods-Aquarium Parameter Tracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC417A55D74C4FF86DCD6292 /* libPods-Aquarium Aquameter TrackerTests.a in Frameworks */,
+				CEB15892D8C93FE271BBE69F /* libPods-Aquarium Parameter TrackerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CCC2E1743A9C6C3B82BC1BE /* libPods-Aquarium Aquameter TrackerUITests.a in Frameworks */,
+				B8607986F586F6AD71F944C7 /* libPods-Aquarium Parameter TrackerUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +122,9 @@
 				E3F19F038B2DA737DC9E6887 /* libPods-Aquarium Aquameter Tracker.a */,
 				1371F60788AC7BBF710DB920 /* libPods-Aquarium Aquameter TrackerTests.a */,
 				D935C964DCBAC44097F32305 /* libPods-Aquarium Aquameter TrackerUITests.a */,
+				5DCAF67C4CCEDF448A7496F3 /* libPods-Aquarium Parameter Tracker.a */,
+				01C4500174673230FFCB07A0 /* libPods-Aquarium Parameter TrackerTests.a */,
+				5B0AB407D7A23FC7A6985F54 /* libPods-Aquarium Parameter TrackerUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,9 +144,9 @@
 		241544BA1FD11D1B007E08EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				241544B91FD11D1B007E08EF /* Aquarium Aquameter Tracker.app */,
-				241544D41FD11D1C007E08EF /* Aquarium Aquameter TrackerTests.xctest */,
-				241544DF1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests.xctest */,
+				241544B91FD11D1B007E08EF /* Aquarium Parameter Tracker.app */,
+				241544D41FD11D1C007E08EF /* Aquarium Parameter TrackerTests.xctest */,
+				241544DF1FD11D1C007E08EF /* Aquarium Parameter TrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,7 +162,8 @@
 				241544CD1FD11D1C007E08EF /* Info.plist */,
 				241544CE1FD11D1C007E08EF /* main.m */,
 			);
-			path = "Aquarium Aquameter Tracker";
+			name = "Aquarium Aquameter Tracker";
+			path = "Aquarium Parameter Tracker";
 			sourceTree = "<group>";
 		};
 		241544D71FD11D1C007E08EF /* Aquarium Aquameter TrackerTests */ = {
@@ -178,8 +195,8 @@
 		243DE3AA1FD39AD100369DFC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				241544BF1FD11D1C007E08EF /* ViewController.h */,
-				241544C01FD11D1C007E08EF /* ViewController.m */,
+				241544BF1FD11D1C007E08EF /* PHViewController.h */,
+				241544C01FD11D1C007E08EF /* PHViewController.m */,
 				243DE3AC1FD39B9400369DFC /* DetailViewController.h */,
 				243DE3AD1FD39B9400369DFC /* DetailViewController.m */,
 			);
@@ -205,6 +222,12 @@
 				6580D9B3B7C8F30AB2E22D89 /* Pods-Aquarium Aquameter TrackerTests.release.xcconfig */,
 				82CC45B820DE8028A195C076 /* Pods-Aquarium Aquameter TrackerUITests.debug.xcconfig */,
 				AA01D6D2B3253F9AB9F7D67C /* Pods-Aquarium Aquameter TrackerUITests.release.xcconfig */,
+				5AF7ED0BB2C9B93829BD238B /* Pods-Aquarium Parameter Tracker.debug.xcconfig */,
+				BF4AE1A251AAFAA056F45D6A /* Pods-Aquarium Parameter Tracker.release.xcconfig */,
+				1BE1F3696F0A7ACA6B70A525 /* Pods-Aquarium Parameter TrackerTests.debug.xcconfig */,
+				2F44BE2AAD9BC7B00FA3B3EE /* Pods-Aquarium Parameter TrackerTests.release.xcconfig */,
+				38AC58ED59DFC2BDD8B4BDA0 /* Pods-Aquarium Parameter TrackerUITests.debug.xcconfig */,
+				5FC76A0905DC0DAC1209F8FD /* Pods-Aquarium Parameter TrackerUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -212,9 +235,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		241544B81FD11D1B007E08EF /* Aquarium Aquameter Tracker */ = {
+		241544B81FD11D1B007E08EF /* Aquarium Parameter Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 241544E81FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter Tracker" */;
+			buildConfigurationList = 241544E81FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Parameter Tracker" */;
 			buildPhases = (
 				BF7B0BDC066F75A580816D35 /* [CP] Check Pods Manifest.lock */,
 				241544B51FD11D1B007E08EF /* Sources */,
@@ -227,14 +250,14 @@
 			);
 			dependencies = (
 			);
-			name = "Aquarium Aquameter Tracker";
+			name = "Aquarium Parameter Tracker";
 			productName = "Aquarium Aquameter Tracker";
-			productReference = 241544B91FD11D1B007E08EF /* Aquarium Aquameter Tracker.app */;
+			productReference = 241544B91FD11D1B007E08EF /* Aquarium Parameter Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		241544D31FD11D1C007E08EF /* Aquarium Aquameter TrackerTests */ = {
+		241544D31FD11D1C007E08EF /* Aquarium Parameter TrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 241544EB1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter TrackerTests" */;
+			buildConfigurationList = 241544EB1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Parameter TrackerTests" */;
 			buildPhases = (
 				2EC4F04B4E5F099E1602C53F /* [CP] Check Pods Manifest.lock */,
 				241544D01FD11D1C007E08EF /* Sources */,
@@ -248,14 +271,14 @@
 			dependencies = (
 				241544D61FD11D1C007E08EF /* PBXTargetDependency */,
 			);
-			name = "Aquarium Aquameter TrackerTests";
+			name = "Aquarium Parameter TrackerTests";
 			productName = "Aquarium Aquameter TrackerTests";
-			productReference = 241544D41FD11D1C007E08EF /* Aquarium Aquameter TrackerTests.xctest */;
+			productReference = 241544D41FD11D1C007E08EF /* Aquarium Parameter TrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		241544DE1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests */ = {
+		241544DE1FD11D1C007E08EF /* Aquarium Parameter TrackerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 241544EE1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter TrackerUITests" */;
+			buildConfigurationList = 241544EE1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Parameter TrackerUITests" */;
 			buildPhases = (
 				F3BA4DB8A2CBCD3310CCEC33 /* [CP] Check Pods Manifest.lock */,
 				241544DB1FD11D1C007E08EF /* Sources */,
@@ -269,9 +292,9 @@
 			dependencies = (
 				241544E11FD11D1C007E08EF /* PBXTargetDependency */,
 			);
-			name = "Aquarium Aquameter TrackerUITests";
+			name = "Aquarium Parameter TrackerUITests";
 			productName = "Aquarium Aquameter TrackerUITests";
-			productReference = 241544DF1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests.xctest */;
+			productReference = 241544DF1FD11D1C007E08EF /* Aquarium Parameter TrackerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -299,7 +322,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 241544B41FD11D1B007E08EF /* Build configuration list for PBXProject "Aquarium Aquameter Tracker" */;
+			buildConfigurationList = 241544B41FD11D1B007E08EF /* Build configuration list for PBXProject "Aquarium Parameter Tracker" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -312,9 +335,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				241544B81FD11D1B007E08EF /* Aquarium Aquameter Tracker */,
-				241544D31FD11D1C007E08EF /* Aquarium Aquameter TrackerTests */,
-				241544DE1FD11D1C007E08EF /* Aquarium Aquameter TrackerUITests */,
+				241544B81FD11D1B007E08EF /* Aquarium Parameter Tracker */,
+				241544D31FD11D1C007E08EF /* Aquarium Parameter TrackerTests */,
+				241544DE1FD11D1C007E08EF /* Aquarium Parameter TrackerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -358,7 +381,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Aquarium Aquameter TrackerTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Aquarium Parameter TrackerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -377,7 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Aquameter Tracker/Pods-Aquarium Aquameter Tracker-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Parameter Tracker/Pods-Aquarium Parameter Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3D1AA7538095FCE39846E262 /* [CP] Embed Pods Frameworks */ = {
@@ -392,7 +415,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Aquameter TrackerUITests/Pods-Aquarium Aquameter TrackerUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Parameter TrackerUITests/Pods-Aquarium Parameter TrackerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7F65D6FD56BF2019D64454F9 /* [CP] Copy Pods Resources */ = {
@@ -407,7 +430,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Aquameter TrackerUITests/Pods-Aquarium Aquameter TrackerUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Parameter TrackerUITests/Pods-Aquarium Parameter TrackerUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B6A1AFD5A5F4592AE57BDD82 /* [CP] Copy Pods Resources */ = {
@@ -422,7 +445,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Aquameter Tracker/Pods-Aquarium Aquameter Tracker-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Parameter Tracker/Pods-Aquarium Parameter Tracker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B8A952B0264680454E61796D /* [CP] Embed Pods Frameworks */ = {
@@ -437,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Aquameter TrackerTests/Pods-Aquarium Aquameter TrackerTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Parameter TrackerTests/Pods-Aquarium Parameter TrackerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF7B0BDC066F75A580816D35 /* [CP] Check Pods Manifest.lock */ = {
@@ -451,7 +474,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Aquarium Aquameter Tracker-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Aquarium Parameter Tracker-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -470,7 +493,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Aquameter TrackerTests/Pods-Aquarium Aquameter TrackerTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aquarium Parameter TrackerTests/Pods-Aquarium Parameter TrackerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F3BA4DB8A2CBCD3310CCEC33 /* [CP] Check Pods Manifest.lock */ = {
@@ -484,7 +507,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Aquarium Aquameter TrackerUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Aquarium Parameter TrackerUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -500,7 +523,7 @@
 			files = (
 				243DE3AE1FD39B9400369DFC /* DetailViewController.m in Sources */,
 				241544C71FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld in Sources */,
-				241544C11FD11D1C007E08EF /* ViewController.m in Sources */,
+				241544C11FD11D1C007E08EF /* PHViewController.m in Sources */,
 				241544CF1FD11D1C007E08EF /* main.m in Sources */,
 				241544BE1FD11D1C007E08EF /* AppDelegate.m in Sources */,
 			);
@@ -527,12 +550,12 @@
 /* Begin PBXTargetDependency section */
 		241544D61FD11D1C007E08EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 241544B81FD11D1B007E08EF /* Aquarium Aquameter Tracker */;
+			target = 241544B81FD11D1B007E08EF /* Aquarium Parameter Tracker */;
 			targetProxy = 241544D51FD11D1C007E08EF /* PBXContainerItemProxy */;
 		};
 		241544E11FD11D1C007E08EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 241544B81FD11D1B007E08EF /* Aquarium Aquameter Tracker */;
+			target = 241544B81FD11D1B007E08EF /* Aquarium Parameter Tracker */;
 			targetProxy = 241544E01FD11D1C007E08EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -663,15 +686,20 @@
 		};
 		241544E91FD11D1C007E08EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCF57489781E3E641D5FEBF3 /* Pods-Aquarium Aquameter Tracker.debug.xcconfig */;
+			baseConfigurationReference = 5AF7ED0BB2C9B93829BD238B /* Pods-Aquarium Parameter Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y692F89PT8;
-				INFOPLIST_FILE = "Aquarium Aquameter Tracker/Info.plist";
+				INFOPLIST_FILE = "Aquarium Parameter Tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-Tracker";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/PNChart\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/UICountingLabel\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Parameter-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -679,15 +707,20 @@
 		};
 		241544EA1FD11D1C007E08EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CB6D3C7315734B70BEB7731 /* Pods-Aquarium Aquameter Tracker.release.xcconfig */;
+			baseConfigurationReference = BF4AE1A251AAFAA056F45D6A /* Pods-Aquarium Parameter Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y692F89PT8;
-				INFOPLIST_FILE = "Aquarium Aquameter Tracker/Info.plist";
+				INFOPLIST_FILE = "Aquarium Parameter Tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-Tracker";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/PNChart\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/UICountingLabel\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Parameter-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -695,7 +728,7 @@
 		};
 		241544EC1FD11D1C007E08EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4ED1B210D85BD904A156D023 /* Pods-Aquarium Aquameter TrackerTests.debug.xcconfig */;
+			baseConfigurationReference = 1BE1F3696F0A7ACA6B70A525 /* Pods-Aquarium Parameter TrackerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -705,13 +738,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-TrackerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aquarium Aquameter Tracker.app/Aquarium Aquameter Tracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aquarium Parameter Tracker.app/Aquarium Parameter Tracker";
 			};
 			name = Debug;
 		};
 		241544ED1FD11D1C007E08EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6580D9B3B7C8F30AB2E22D89 /* Pods-Aquarium Aquameter TrackerTests.release.xcconfig */;
+			baseConfigurationReference = 2F44BE2AAD9BC7B00FA3B3EE /* Pods-Aquarium Parameter TrackerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -721,13 +754,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Aquameter-TrackerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aquarium Aquameter Tracker.app/Aquarium Aquameter Tracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aquarium Parameter Tracker.app/Aquarium Parameter Tracker";
 			};
 			name = Release;
 		};
 		241544EF1FD11D1C007E08EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82CC45B820DE8028A195C076 /* Pods-Aquarium Aquameter TrackerUITests.debug.xcconfig */;
+			baseConfigurationReference = 38AC58ED59DFC2BDD8B4BDA0 /* Pods-Aquarium Parameter TrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y692F89PT8;
@@ -742,7 +775,7 @@
 		};
 		241544F01FD11D1C007E08EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA01D6D2B3253F9AB9F7D67C /* Pods-Aquarium Aquameter TrackerUITests.release.xcconfig */;
+			baseConfigurationReference = 5FC76A0905DC0DAC1209F8FD /* Pods-Aquarium Parameter TrackerUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y692F89PT8;
@@ -758,7 +791,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		241544B41FD11D1B007E08EF /* Build configuration list for PBXProject "Aquarium Aquameter Tracker" */ = {
+		241544B41FD11D1B007E08EF /* Build configuration list for PBXProject "Aquarium Parameter Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				241544E61FD11D1C007E08EF /* Debug */,
@@ -767,7 +800,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		241544E81FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter Tracker" */ = {
+		241544E81FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Parameter Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				241544E91FD11D1C007E08EF /* Debug */,
@@ -776,7 +809,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		241544EB1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter TrackerTests" */ = {
+		241544EB1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Parameter TrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				241544EC1FD11D1C007E08EF /* Debug */,
@@ -785,7 +818,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		241544EE1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Aquameter TrackerUITests" */ = {
+		241544EE1FD11D1C007E08EF /* Build configuration list for PBXNativeTarget "Aquarium Parameter TrackerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				241544EF1FD11D1C007E08EF /* Debug */,
