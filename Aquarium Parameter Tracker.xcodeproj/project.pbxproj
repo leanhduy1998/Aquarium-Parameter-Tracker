@@ -16,6 +16,7 @@
 		241544CF1FD11D1C007E08EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544CE1FD11D1C007E08EF /* main.m */; };
 		241544D91FD11D1C007E08EF /* Aquarium_Aquameter_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544D81FD11D1C007E08EF /* Aquarium_Aquameter_TrackerTests.m */; };
 		241544E41FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544E31FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m */; };
+		24217C711FDBD6C700B86AF9 /* SharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 24217C701FDBD6C700B86AF9 /* SharedData.m */; };
 		243DE3AE1FD39B9400369DFC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243DE3AD1FD39B9400369DFC /* DetailViewController.m */; };
 		24FDFC691FD28AC1005DE267 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FDFC681FD28AC1005DE267 /* CoreData.framework */; };
 		9CCC2E1743A9C6C3B82BC1BE /* libPods-Aquarium Aquameter TrackerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D935C964DCBAC44097F32305 /* libPods-Aquarium Aquameter TrackerUITests.a */; };
@@ -63,6 +64,8 @@
 		241544DF1FD11D1C007E08EF /* Aquarium Parameter TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aquarium Parameter TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		241544E31FD11D1C007E08EF /* Aquarium_Aquameter_TrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aquarium_Aquameter_TrackerUITests.m; sourceTree = "<group>"; };
 		241544E51FD11D1C007E08EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24217C6F1FDBD6C700B86AF9 /* SharedData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedData.h; sourceTree = "<group>"; };
+		24217C701FDBD6C700B86AF9 /* SharedData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedData.m; sourceTree = "<group>"; };
 		243DE3A51FD3753100369DFC /* Aquarium_Aquameter_Tracker 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Aquarium_Aquameter_Tracker 2.xcdatamodel"; sourceTree = "<group>"; };
 		243DE3AC1FD39B9400369DFC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		243DE3AD1FD39B9400369DFC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				241544C51FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld */,
+				24217C6F1FDBD6C700B86AF9 /* SharedData.h */,
+				24217C701FDBD6C700B86AF9 /* SharedData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				241544C71FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld in Sources */,
 				241544C11FD11D1C007E08EF /* PHViewController.m in Sources */,
 				241544CF1FD11D1C007E08EF /* main.m in Sources */,
+				24217C711FDBD6C700B86AF9 /* SharedData.m in Sources */,
 				241544BE1FD11D1C007E08EF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

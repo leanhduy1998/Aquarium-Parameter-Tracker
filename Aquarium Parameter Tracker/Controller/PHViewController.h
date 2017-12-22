@@ -13,9 +13,15 @@
 @interface PHViewController : UIViewController
 @property (strong, nonatomic) IBOutlet PNLineChart *lineChart;
 
+- (IBAction)helpBtnClicked:(id)sender;
 
 
-//
+
+-(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
+
+-(void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
+
+
 #pragma mark - Core data for messages vriable
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

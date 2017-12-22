@@ -13,7 +13,7 @@
 @end
 
 @implementation AppDelegate
-@property (strong,nonatomic)NSMutableArray *timeArray;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

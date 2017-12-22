@@ -10,10 +10,9 @@
 #import "CoreData/CoreData.h"
 #import "PNChart.h"
 #import "AppDelegate.h"
+#import "SharedData.h"
 
 @interface PHViewController ()
-
-@property (strong,nonatomic)NSMutableArray *timeArray;
 
 @property (strong,nonatomic)NSMutableArray *timeLabels;
 
@@ -22,6 +21,11 @@
 @property (strong,nonatomic)NSMutableArray *nitriteData;
 @property (strong,nonatomic)NSMutableArray *nitrateData;
 
+@property (strong,nonatomic) NSMutableDictionary *dataDic;
+@property (strong,nonatomic)NSMutableArray *sortedDateArr;
+
+@property (strong,nonatomic)SharedData *sharedManager;
+
 typedef enum{
     Year = 1,
     Month = 2,
@@ -29,8 +33,9 @@ typedef enum{
     Hour = 4,
 } ZoomMode;
 
-extern int currentMode = 3;
-
+@property (assign) int currentMode;
+@property (assign) int currentPage;
+@property (assign) int totalPage;
 
 @end
 
@@ -55,11 +60,116 @@ extern int currentMode = 3;
     _ammoniaData = [[NSMutableArray alloc]init];
     _nitriteData = [[NSMutableArray alloc]init];
     _nitrateData = [[NSMutableArray alloc]init];
-    ZoomMode currentZoom = Day;
-    int a = currentZoom;
+    
+    
+    _sharedManager = [SharedData sharedManager];
+    _sharedManager.timeArray = [[NSMutableArray alloc]init];
+    
+    _dataDic = [NSMutableDictionary new];
+    
+    _currentMode = 3;
+    _currentPage = 1;
+    _totalPage = 0;
+    
+    
+    
+    UISwipeGestureRecognizer *swipeLeftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToLeftWithGestureRecognizer:)];
+    swipeLeftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    
+    UISwipeGestureRecognizer *swipeRightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToRightWithGestureRecognizer:)];
+    swipeRightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+
+    [self.view addGestureRecognizer:swipeLeftRecognizer];
+    [self.view addGestureRecognizer:swipeRightRecognizer];
+}
+
+-(void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
+    if(_currentPage < _totalPage){
+        _currentPage = _currentPage + 1;
+        [self loadLineChart];
+    }
+}
+
+- (IBAction)helpBtnClicked:(id)sender {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
+                                                                   message:@"Swipe left and right to see your data. Pinch and spread to see."
+                                                    preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
+    if(_currentPage >1){
+        _currentPage = _currentPage - 1;
+        [self loadLineChart];
+    }
 }
 
 - (void)loadLineChart {
+    [_timeLabels removeAllObjects];
+    [_phData removeAllObjects];
+ /*   [_ammoniaData removeAllObjects];
+    [_nitriteData removeAllObjects];
+    [_nitrateData removeAllObjects];*/
+    
+    if(_currentMode == Day){
+  //      _totalPage = [_sharedManager.timeArray count];
+        //for (int i = 0; i < [_sortedDateArr count]; i++){
+        if(_currentPage == _totalPage){
+            for (int i = (_currentPage-1)*5; i < _currentPage*5; i++){
+                if(i >= _sortedDateArr.count){
+                    break;
+                }
+                
+                NSManagedObject *yearCore = [_dataDic objectForKey:_sortedDateArr[i]];
+                NSManagedObject *monthCore = [yearCore valueForKey:@"yearMonth"];
+                NSManagedObject *dayCore = [monthCore valueForKey:@"monthDay"];
+                
+                NSNumber *ph = [NSNumber numberWithFloat:[[dayCore valueForKey:@"ph"] floatValue]] ;
+                [_phData addObject:ph];
+                
+                NSString *label = [NSString stringWithFormat:@"%ld/%ld", [[monthCore valueForKey:@"month"] integerValue], [[dayCore valueForKey:@"day"] integerValue]];
+                
+                [_timeLabels addObject:label];
+                
+                /* NSNumber *ammonia = [NSNumber numberWithFloat:[[dayCore valueForKey:@"ammonia"] floatValue]] ;
+                 [_ammoniaData addObject:ammonia];
+                 NSNumber *nitrite = [NSNumber numberWithFloat:[[dayCore valueForKey:@"nitrite"] floatValue]] ;
+                 [_nitriteData addObject:nitrite];
+                 NSNumber *nitrate = [NSNumber numberWithFloat:[[dayCore valueForKey:@"nitrate"] floatValue]] ;
+                 [_nitrateData addObject:nitrate];*/
+            }
+
+        }
+        else{
+            for (int i = (_currentPage-1)*5; i < _currentPage*5; i++){
+                NSManagedObject *yearCore = [_dataDic objectForKey:_sortedDateArr[i]];
+                NSManagedObject *monthCore = [yearCore valueForKey:@"yearMonth"];
+                NSManagedObject *dayCore = [monthCore valueForKey:@"monthDay"];
+                
+                NSNumber *ph = [NSNumber numberWithFloat:[[dayCore valueForKey:@"ph"] floatValue]] ;
+                [_phData addObject:ph];
+                
+                NSString *label = [NSString stringWithFormat:@"%ld/%ld", [[monthCore valueForKey:@"month"] integerValue], [[dayCore valueForKey:@"day"] integerValue]];
+                
+                [_timeLabels addObject:label];
+                
+                /* NSNumber *ammonia = [NSNumber numberWithFloat:[[dayCore valueForKey:@"ammonia"] floatValue]] ;
+                 [_ammoniaData addObject:ammonia];
+                 NSNumber *nitrite = [NSNumber numberWithFloat:[[dayCore valueForKey:@"nitrite"] floatValue]] ;
+                 [_nitriteData addObject:nitrite];
+                 NSNumber *nitrate = [NSNumber numberWithFloat:[[dayCore valueForKey:@"nitrate"] floatValue]] ;
+                 [_nitrateData addObject:nitrate];*/
+            }
+        }
+        
+    }
+    
+    
     [_lineChart setXLabels:_timeLabels];
  //   [_lineChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5",@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
     
@@ -84,7 +194,7 @@ extern int currentMode = 3;
         return [PNLineChartDataItem dataItemWithY:yValue];
     };
     
-    PNLineChartData *ammoniaLine = [PNLineChartData new];
+  /*  PNLineChartData *ammoniaLine = [PNLineChartData new];
     ammoniaLine.color = PNYellow;
     ammoniaLine.itemCount = _lineChart.xLabels.count;
     ammoniaLine.getData = ^(NSUInteger index) {
@@ -140,8 +250,9 @@ extern int currentMode = 3;
         }
         return [PNLineChartDataItem dataItemWithY:yValue];
     };
-    
-    _lineChart.chartData = @[phLine, ammoniaLine, nitriteLine, nitrateLine];
+    */
+   // _lineChart.chartData = @[phLine, ammoniaLine, nitriteLine, nitrateLine];
+    _lineChart.chartData = @[phLine];
     [_lineChart strokeChart];
     
     _lineChart.showSmoothLines = YES;
@@ -183,7 +294,7 @@ extern int currentMode = 3;
         
         
         NSManagedObject *monthCore = [NSEntityDescription insertNewObjectForEntityForName:@"Month" inManagedObjectContext:[self managedObjectContext]];
-        [monthCore setValue:@(month) forKey:@"month"];
+        [monthCore setValue:@(1) forKey:@"month"];
         [monthCore setValue:dayCore forKey:@"monthDay"];
         
         NSManagedObject *yearCore = [NSEntityDescription insertNewObjectForEntityForName:@"Year" inManagedObjectContext:[self managedObjectContext]];
@@ -192,6 +303,32 @@ extern int currentMode = 3;
         [yearCore setValue:monthCore forKey:@"yearMonth"];
     }
     
+    for(int i=1;i<=12;i++){
+        NSManagedObject *dayCore = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:[self managedObjectContext]];
+        
+        [dayCore setValue:@(1) forKey:@"day"];
+        
+        [dayCore setValue:_phData[i] forKey:@"ph"];
+        [dayCore setValue:_ammoniaData[i] forKey:@"ammonia"];
+        [dayCore setValue:_nitriteData[i] forKey:@"nitrite"];
+        [dayCore setValue:_nitrateData[i] forKey:@"nitrate"];
+        [dayCore setValue:@(hour) forKey:@"hour"];
+        [dayCore setValue:@(minute) forKey:@"minute"];
+        [dayCore setValue:@(second) forKey:@"second"];
+        
+        
+        NSManagedObject *monthCore = [NSEntityDescription insertNewObjectForEntityForName:@"Month" inManagedObjectContext:[self managedObjectContext]];
+        [monthCore setValue:@(i) forKey:@"month"];
+        [monthCore setValue:dayCore forKey:@"monthDay"];
+        
+        NSManagedObject *yearCore = [NSEntityDescription insertNewObjectForEntityForName:@"Year" inManagedObjectContext:[self managedObjectContext]];
+        [yearCore setValue:@(year) forKey:@"year"];
+        
+        [yearCore setValue:monthCore forKey:@"yearMonth"];
+    }
+    
+    
+    
     [_phData removeAllObjects];
     [_ammoniaData removeAllObjects];
     [_nitriteData removeAllObjects];
@@ -199,13 +336,6 @@ extern int currentMode = 3;
 }
 
 - (void)loadData {
-    [_timeLabels removeAllObjects];
-    [_phData removeAllObjects];
-    [_ammoniaData removeAllObjects];
-    [_nitriteData removeAllObjects];
-    [_nitrateData removeAllObjects];
-    
-    
     [self test];
     
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
@@ -217,68 +347,43 @@ extern int currentMode = 3;
     
 
     NSDate *date = [NSDate date];
+    NSMutableArray* newArray = [[NSMutableArray alloc]init];
     
-
-    NSArray* newArray = [yearArray sortedArrayUsingComparator: ^NSComparisonResult(NSManagedObject *yearCore1, NSManagedObject *yearCore2)
-    {
+    for(int i=0;i<yearArray.count;i++){
         NSDateComponents *components1 = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:date];
-        NSDateComponents *components2 = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:date];
         
+        NSCalendar* dupCal =  [[NSCalendar currentCalendar] copy];
+        [components1 setCalendar:dupCal];
         
-        NSManagedObject *monthCore1 = [yearCore1 valueForKey:@"yearMonth"];
-        NSManagedObject *monthCore2 = [yearCore2 valueForKey:@"yearMonth"];
-        
+        NSManagedObject *monthCore1 = [yearArray[i] valueForKey:@"yearMonth"];
         
         NSManagedObject *dayCore1 = [monthCore1 valueForKey:@"monthDay"];
-        NSManagedObject *dayCore2 = [monthCore2 valueForKey:@"monthDay"];
         
-        [components1 setYear:[[yearCore1 valueForKey:@"year"] integerValue]];
+        [components1 setYear:[[yearArray[i] valueForKey:@"year"] integerValue]];
         [components1 setMonth:[[monthCore1 valueForKey:@"month"] integerValue]];
         [components1 setDay:[[dayCore1 valueForKey:@"day"] integerValue]];
         [components1 setHour:[[dayCore1 valueForKey:@"hour"] integerValue]];
         [components1 setMinute:[[dayCore1 valueForKey:@"minute"] integerValue]];
         [components1 setSecond:[[dayCore1 valueForKey:@"second"] integerValue]];
         
-        [components2 setYear:[[yearCore2 valueForKey:@"year"] integerValue]];
-        [components2 setMonth:[[monthCore2 valueForKey:@"month"] integerValue]];
-        [components2 setDay:[[dayCore2 valueForKey:@"day"] integerValue]];
-        [components2 setHour:[[dayCore2 valueForKey:@"hour"] integerValue]];
-        [components2 setMinute:[[dayCore2 valueForKey:@"minute"] integerValue]];
-        [components2 setSecond:[[dayCore2 valueForKey:@"second"] integerValue]];
+        NSDate *d1 = [components1 date];
         
+        [newArray addObject:d1];
         
-        NSDate *d1 = components1.date;
-        NSDate *d2 = components2.date;
-        
-        return [d1 compare:d2];
-    }];
-    
-    yearArray = newArray;
-    
-    [_timeArray removeAllObjects];
-    [_timeArray addObjectsFromArray:yearArray];
-    
-    
-    for (int i = 0; i < [yearArray count]; i++){
-        NSManagedObject *yearCore = yearArray[i];
-        NSManagedObject *monthCore = [yearCore valueForKey:@"yearMonth"];
-        NSManagedObject *dayCore = [monthCore valueForKey:@"monthDay"];
-        
-        NSNumber *ph = [NSNumber numberWithFloat:[[dayCore valueForKey:@"ph"] floatValue]] ;
-        [_phData addObject:ph];
-        NSNumber *ammonia = [NSNumber numberWithFloat:[[dayCore valueForKey:@"ammonia"] floatValue]] ;
-        [_ammoniaData addObject:ammonia];
-        NSNumber *nitrite = [NSNumber numberWithFloat:[[dayCore valueForKey:@"nitrite"] floatValue]] ;
-        [_nitriteData addObject:nitrite];
-        NSNumber *nitrate = [NSNumber numberWithFloat:[[dayCore valueForKey:@"nitrate"] floatValue]] ;
-        [_nitrateData addObject:nitrate];
-        
-        NSLog(@"%@/%@/%@",[[monthCore valueForKey:@"month"] stringValue],[[dayCore valueForKey:@"day"] stringValue], [[yearCore valueForKey:@"year"] stringValue]);
-        
-        NSString *label = [NSString stringWithFormat:@"%ld/%ld", [[monthCore valueForKey:@"month"] integerValue], [[dayCore valueForKey:@"day"] integerValue]];
-        
-        [_timeLabels addObject:label];
+        [_dataDic setObject:yearArray[i] forKey:d1];
     }
+    
+    
+    [newArray sortUsingSelector:@selector(compare:)];
+    _sortedDateArr = newArray;
+    
+    int totalItems = yearArray.count;
+    
+    while(totalItems>0){
+        totalItems = totalItems - 5;
+        _totalPage = _totalPage + 1;
+    }
+    _currentPage = _totalPage;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -288,6 +393,10 @@ extern int currentMode = 3;
     [self loadData];
     [self loadLineChart];
    // self.years = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
 }
 
 
