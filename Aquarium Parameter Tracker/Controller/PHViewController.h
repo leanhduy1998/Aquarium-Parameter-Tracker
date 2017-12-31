@@ -12,13 +12,12 @@
 
 @interface PHViewController : UIViewController
 @property (strong, nonatomic) IBOutlet PNLineChart *lineChart;
-
+    @property (weak, nonatomic) IBOutlet UILabel *noDataLabel;
+    
 - (IBAction)helpBtnClicked:(id)sender;
-
-
+    
 
 -(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
-
 -(void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
 
 
@@ -28,17 +27,11 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
-- (void)saveContext;
 
 - (void)loadLineChart;
 - (void)loadData;
 
-
-
 - (NSURL *)applicationDocumentsDirectory;
-
-
-
 
 @end
 
