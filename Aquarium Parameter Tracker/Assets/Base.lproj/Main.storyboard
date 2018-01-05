@@ -103,7 +103,6 @@
         <!--Ammonia-->
         <scene sceneID="ArC-ZV-s4W">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j5E-65-VZB" sceneMemberID="firstResponder"/>
                 <viewController id="4GY-Bu-mE9" customClass="AmmoniaViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c1d-ro-OJN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -155,13 +154,14 @@
                         <outlet property="noDataLabel" destination="ztd-Cp-YnV" id="LkV-rj-V4c"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5E-65-VZB" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1596" y="246.9265367316342"/>
         </scene>
         <!--Nitrate-->
         <scene sceneID="alS-b5-5QO">
             <objects>
-                <viewController id="kr6-i7-YmO" customClass="PHViewController" sceneMemberID="viewController">
+                <viewController id="kr6-i7-YmO" customClass="NitrateViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YP7-vk-Jgk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,6 +391,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="K9U-cx-cjG"/>
+        <segue reference="tDu-7J-z8B"/>
     </inferredMetricsTieBreakers>
 </document>

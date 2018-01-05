@@ -1,23 +1,22 @@
 //
-//  AmmoniaViewController.m
+//  NitrateViewController.m
 //  Aquarium Parameter Tracker
 //
-//  Created by Duy Le on 12/30/17.
+//  Created by Duy Le on 12/31/17.
 //  Copyright © 2017 Duy Le. All rights reserved.
 //
 
-#import "AmmoniaViewController.h"
+#import "NitrateViewController.h"
 #import "CoreData/CoreData.h"
 #import "PNChart.h"
 #import "AppDelegate.h"
 #import "SharedData.h"
 #import "Helper.h"
 
-@interface AmmoniaViewController ()
-
+@interface NitrateViewController ()
 @property (strong,nonatomic)NSMutableArray *timeLabels;
 
-@property (strong,nonatomic)NSMutableArray *ammoniaData;
+@property (strong,nonatomic)NSMutableArray *nitrateData;
 
 @property (strong,nonatomic) NSMutableDictionary *dataDic;
 @property (strong,nonatomic)NSMutableArray *sortedDateArr;
@@ -29,8 +28,8 @@
 
 @end
 
-@implementation AmmoniaViewController
-    
+@implementation NitrateViewController
+
 - (NSManagedObjectContext *) managedObjectContext{
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];
@@ -39,14 +38,15 @@
     }
     return context;
 }
-    
+
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
 }
-    
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _timeLabels = [[NSMutableArray alloc]init];
-    _ammoniaData = [[NSMutableArray alloc]init];
+    _nitrateData = [[NSMutableArray alloc]init];
+    _sortedDateArr = [[NSMutableArray alloc]init];
     
     _sharedManager = [SharedData sharedManager];
     _sharedManager.timeArray = [[NSMutableArray alloc]init];
@@ -55,7 +55,6 @@
     
     _currentPage = 1;
     _totalPage = 0;
-    
     
     UISwipeGestureRecognizer *swipeLeftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToLeftWithGestureRecognizer:)];
     swipeLeftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -68,21 +67,21 @@
     
     [self loadData];
 }
-    
+
 -(void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
     if(_currentPage < _totalPage){
         _currentPage = _currentPage + 1;
         [self loadLineChart];
     }
 }
-    
+
 -(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
     if(_currentPage >1){
         _currentPage = _currentPage - 1;
         [self loadLineChart];
     }
 }
-    
+
 - (IBAction)helpBtnClicked:(id)sender {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
                                                                    message:@"Swipe left and right to see your data."
@@ -94,31 +93,35 @@
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
-    
+
 - (void)loadLineChart {
-    PNLineChartData *ammoniaLine = [PNLineChartData new];
-    ammoniaLine.color = PNLightGreen;
-    
     //loadLineChart:(NSMutableArray*)timeLabels: (NSMutableArray*) chemData: (NSMutableArray*) sortedDateArr: (int)currentPage :(int)totalPage: (NSMutableDictionary*) dataDic: (PNLineChart*) lineChart: (UILabel*) noDataLabel: (PNLineChartData*) chemLine;
-    [Helper loadLineChart:_timeLabels :_ammoniaData :_sortedDateArr :_currentPage :_totalPage :_dataDic :_lineChart :_noDataLabel : ammoniaLine : 1];
+    
+    PNLineChartData *nitrateLine = [PNLineChartData new];
+    [Helper loadLineChart:_timeLabels :_nitrateData :_sortedDateArr :_currentPage :_totalPage :_dataDic :_lineChart :_noDataLabel : nitrateLine : 3];
+    nitrateLine.color = [UIColor colorWithRed:255.0f/255.0f
+                                        green:96.0f/255.0f
+                                         blue:27.0f/255.0f
+                                        alpha:1.0f];
 }
-    
-    
+
+
 - (void)loadData {
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     //loadData: (NSManagedObjectContext*)managedObjectContext: (NSMutableDictionary*) dataDic: (NSMutableArray*) sortedDateArr: (int) totalPage: (int) currentPage
     [Helper loadData:managedObjectContext :_dataDic :_sortedDateArr :&(_totalPage) :&(_currentPage)];
 }
-    
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self loadLineChart];
     // self.years = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
 }
-    
-    
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 @end

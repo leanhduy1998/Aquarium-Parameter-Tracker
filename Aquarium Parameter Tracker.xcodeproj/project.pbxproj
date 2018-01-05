@@ -20,6 +20,8 @@
 		243DE3AE1FD39B9400369DFC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243DE3AD1FD39B9400369DFC /* DetailViewController.m */; };
 		246C01CD1FF8506C00DE591D /* AmmoniaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246C01CC1FF8506C00DE591D /* AmmoniaViewController.m */; };
 		246C01D01FF86E4900DE591D /* NitriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246C01CF1FF86E4900DE591D /* NitriteViewController.m */; };
+		246C01D31FF95EC100DE591D /* NitrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246C01D21FF95EC100DE591D /* NitrateViewController.m */; };
+		24A564881FFF01D7001DE257 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A564871FFF01D7001DE257 /* Helper.m */; };
 		24FDFC691FD28AC1005DE267 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FDFC681FD28AC1005DE267 /* CoreData.framework */; };
 		9CCC2E1743A9C6C3B82BC1BE /* libPods-Aquarium Aquameter TrackerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D935C964DCBAC44097F32305 /* libPods-Aquarium Aquameter TrackerUITests.a */; };
 		B8607986F586F6AD71F944C7 /* libPods-Aquarium Parameter TrackerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0AB407D7A23FC7A6985F54 /* libPods-Aquarium Parameter TrackerUITests.a */; };
@@ -75,6 +77,10 @@
 		246C01CC1FF8506C00DE591D /* AmmoniaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmmoniaViewController.m; sourceTree = "<group>"; };
 		246C01CE1FF86E4900DE591D /* NitriteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NitriteViewController.h; sourceTree = "<group>"; };
 		246C01CF1FF86E4900DE591D /* NitriteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NitriteViewController.m; sourceTree = "<group>"; };
+		246C01D11FF95EC100DE591D /* NitrateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NitrateViewController.h; sourceTree = "<group>"; };
+		246C01D21FF95EC100DE591D /* NitrateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NitrateViewController.m; sourceTree = "<group>"; };
+		24A564861FFF01D7001DE257 /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		24A564871FFF01D7001DE257 /* Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		24FDFC681FD28AC1005DE267 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2F44BE2AAD9BC7B00FA3B3EE /* Pods-Aquarium Parameter TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Parameter TrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Parameter TrackerTests/Pods-Aquarium Parameter TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		38AC58ED59DFC2BDD8B4BDA0 /* Pods-Aquarium Parameter TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Parameter TrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Parameter TrackerUITests/Pods-Aquarium Parameter TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -212,8 +218,12 @@
 				246C01CC1FF8506C00DE591D /* AmmoniaViewController.m */,
 				246C01CE1FF86E4900DE591D /* NitriteViewController.h */,
 				246C01CF1FF86E4900DE591D /* NitriteViewController.m */,
+				246C01D11FF95EC100DE591D /* NitrateViewController.h */,
+				246C01D21FF95EC100DE591D /* NitrateViewController.m */,
 				243DE3AC1FD39B9400369DFC /* DetailViewController.h */,
 				243DE3AD1FD39B9400369DFC /* DetailViewController.m */,
+				24A564861FFF01D7001DE257 /* Helper.h */,
+				24A564871FFF01D7001DE257 /* Helper.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -542,8 +552,10 @@
 				241544C11FD11D1C007E08EF /* PHViewController.m in Sources */,
 				241544CF1FD11D1C007E08EF /* main.m in Sources */,
 				24217C711FDBD6C700B86AF9 /* SharedData.m in Sources */,
+				246C01D31FF95EC100DE591D /* NitrateViewController.m in Sources */,
 				246C01CD1FF8506C00DE591D /* AmmoniaViewController.m in Sources */,
 				241544BE1FD11D1C007E08EF /* AppDelegate.m in Sources */,
+				24A564881FFF01D7001DE257 /* Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,17 +22,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Aquarium Parameter Tracker/Controller/PHViewController.m"
-            timestampString = "536435744.961583"
+            filePath = "Aquarium Parameter Tracker/Controller/NitriteViewController.h"
+            timestampString = "536807649.473245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
-            landmarkName = "-test"
-            landmarkType = "7">
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "noDataLabel"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NitriteViewController noDataLabel]"
+                  moduleName = "Aquarium Parameter Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duyle/Desktop/ios/Aquarium%20Parameter%20Tracker/Aquarium%20Parameter%20Tracker/Controller/NitriteViewController.h"
+                  timestampString = "536812019.978916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NitriteViewController setNoDataLabel:]"
+                  moduleName = "Aquarium Parameter Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duyle/Desktop/ios/Aquarium%20Parameter%20Tracker/Aquarium%20Parameter%20Tracker/Controller/NitriteViewController.h"
+                  timestampString = "536812019.982566"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
