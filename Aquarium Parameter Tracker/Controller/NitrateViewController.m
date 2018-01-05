@@ -82,6 +82,20 @@
     }
 }
 
+- (void)loadSlider {
+    //loadSlider: (int) totalPage: (UISlider*) slider: (UILabel*) pageLabel
+    [Helper loadSlider:_totalPage :_slider :_pageLabel];
+    [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (IBAction)sliderValueChanged:(UISlider *)sender {
+    _slider.value = roundf(sender.value / 1.0) * 1.0;
+    _currentPage = _slider.value;
+    [self loadLineChart];
+    NSString *pageText = [NSString stringWithFormat: @"Page %d of %d.", (int) _slider.value, _totalPage];
+    [_pageLabel setText:pageText];
+}
+
 - (IBAction)helpBtnClicked:(id)sender {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
                                                                    message:@"Swipe left and right to see your data."

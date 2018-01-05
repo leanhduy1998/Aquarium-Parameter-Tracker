@@ -15,5 +15,6 @@
 
 +  (void)loadLineChart:(NSMutableArray*)timeLabels: (NSMutableArray*) chemData: (NSMutableArray*) sortedDateArr: (int)currentPage :(int)totalPage: (NSMutableDictionary*) dataDic: (PNLineChart*) lineChart: (UILabel*) noDataLabel: (PNLineChartData*) chemLine: (int) chemNum;
 + (void)loadData: (NSManagedObjectContext*)managedObjectContext: (NSMutableDictionary*) dataDic: (NSMutableArray*) sortedDateArr: (int*) totalPage: (int*) currentPage;
++ (void)loadSlider: (int) totalPage: (UISlider*) slider: (UILabel*) pageLabel;
 
 @end

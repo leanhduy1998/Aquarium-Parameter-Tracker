@@ -114,6 +114,20 @@
     [Helper loadLineChart:_timeLabels :_phData :_sortedDateArr :_currentPage :_totalPage :_dataDic :_lineChart :_noDataLabel : phLine : 0];
 }
 
+- (void)loadSlider {
+    //loadSlider: (int) totalPage: (UISlider*) slider: (UILabel*) pageLabel
+    [Helper loadSlider:_totalPage :_slider :_pageLabel];
+    [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (IBAction)sliderValueChanged:(UISlider *)sender {
+    _slider.value = roundf(sender.value / 1.0) * 1.0;
+    _currentPage = _slider.value;
+    [self loadLineChart];
+    NSString *pageText = [NSString stringWithFormat: @"Page %d of %d.", (int) _slider.value, _totalPage];
+    [_pageLabel setText:pageText];
+}
+
 - (void)test{
     [_phData addObjectsFromArray:@[@1,@2.5,@4,@8,@9,@4,@3,@0,@2,@5,@1,@2.5,@4,@8,@9,@4,@3,@0,@2,@5,@1,@2.5,@4,@8,@9,@4,@3,@0,@2,@5]];
     [_ammoniaData addObjectsFromArray:@[@0,@0.25,@0.5,@1,@2,@4,@8,@2,@1,@4,@0,@0.25,@0.5,@1,@2,@4,@8,@2,@1,@4,@0,@0.25,@0.5,@1,@2,@4,@8,@2,@1,@4]];
@@ -196,6 +210,7 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self loadLineChart];
+    [self loadSlider];
    // self.years = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
 }
 

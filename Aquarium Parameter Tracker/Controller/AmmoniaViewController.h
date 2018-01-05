@@ -13,6 +13,8 @@
 @interface AmmoniaViewController : UIViewController
     @property (strong, nonatomic) IBOutlet PNLineChart *lineChart;
     @property (weak, nonatomic) IBOutlet UILabel *noDataLabel;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet UILabel *pageLabel;
     
 - (IBAction)helpBtnClicked:(id)sender;
     

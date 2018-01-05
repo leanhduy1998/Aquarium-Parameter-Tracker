@@ -143,4 +143,17 @@
     *currentPage = *totalPage;
 }
 
++  (void)loadSlider:(NSMutableArray*)timeLabels: (NSMutableArray*) chemData: (NSMutableArray*) sortedDateArr: (int)currentPage :(int)totalPage: (NSMutableDictionary*) dataDic: (PNLineChart*) lineChart: (UILabel*) noDataLabel: (PNLineChartData*) chemLine: (int) chemNum{
+    
+}
+
++ (void)loadSlider: (int) totalPage: (UISlider*) slider: (UILabel*) pageLabel {
+    slider.minimumValue = 1.0;
+    slider.maximumValue = totalPage;
+    slider.value = totalPage;
+    
+    NSString *pageText = [NSString stringWithFormat: @"Page %d of %d.", totalPage, totalPage];
+    [pageLabel setText:pageText];
+}
+
 @end
