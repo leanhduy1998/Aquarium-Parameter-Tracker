@@ -50,6 +50,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _timeLabels = [[NSMutableArray alloc]init];
+    _sortedDateArr = [[NSMutableArray alloc]init];
+    
     _phData = [[NSMutableArray alloc]init];
     _ammoniaData = [[NSMutableArray alloc]init];
     _nitriteData = [[NSMutableArray alloc]init];

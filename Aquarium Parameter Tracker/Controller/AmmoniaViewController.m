@@ -47,6 +47,7 @@
     [super viewDidLoad];
     _timeLabels = [[NSMutableArray alloc]init];
     _ammoniaData = [[NSMutableArray alloc]init];
+    _sortedDateArr = [[NSMutableArray alloc]init];
     
     _sharedManager = [SharedData sharedManager];
     _sharedManager.timeArray = [[NSMutableArray alloc]init];
