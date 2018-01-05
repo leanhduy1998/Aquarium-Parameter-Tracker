@@ -152,8 +152,8 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FLR-fH-5pt">
                                 <rect key="frame" x="8" y="30" width="359" height="31"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Page x out of y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kY-NQ-7sk">
-                                <rect key="frame" x="14" y="70" width="355" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page x out of y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kY-NQ-7sk">
+                                <rect key="frame" x="10" y="70" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -169,6 +169,8 @@
                             <constraint firstItem="ztd-Cp-YnV" firstAttribute="centerX" secondItem="c1d-ro-OJN" secondAttribute="centerX" id="9Bz-FB-LRh"/>
                             <constraint firstItem="4kY-NQ-7sk" firstAttribute="top" secondItem="FLR-fH-5pt" secondAttribute="bottom" constant="10" id="Asw-Wa-Q4b"/>
                             <constraint firstItem="2Y1-3z-IAh" firstAttribute="trailing" secondItem="s8N-Gn-Udw" secondAttribute="trailing" constant="-40" id="Exv-0v-uoI"/>
+                            <constraint firstItem="2Y1-3z-IAh" firstAttribute="trailing" secondItem="4kY-NQ-7sk" secondAttribute="trailing" constant="10" id="FXp-hm-Wtd"/>
+                            <constraint firstItem="4kY-NQ-7sk" firstAttribute="leading" secondItem="2Y1-3z-IAh" secondAttribute="leading" constant="10" id="JF4-ba-FHt"/>
                             <constraint firstItem="FLR-fH-5pt" firstAttribute="leading" secondItem="2Y1-3z-IAh" secondAttribute="leading" constant="10" id="NJV-4s-DqQ"/>
                             <constraint firstItem="gQx-77-mvx" firstAttribute="leading" secondItem="2Y1-3z-IAh" secondAttribute="leading" constant="10" id="WIN-Zz-Crw"/>
                             <constraint firstItem="s8N-Gn-Udw" firstAttribute="top" secondItem="4kY-NQ-7sk" secondAttribute="bottom" constant="10" id="X7U-kp-ibK"/>
@@ -461,6 +463,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tDu-7J-z8B"/>
+        <segue reference="cuy-b8-zkM"/>
     </inferredMetricsTieBreakers>
 </document>

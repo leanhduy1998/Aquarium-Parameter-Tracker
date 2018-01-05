@@ -129,6 +129,7 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self loadLineChart];
+    [self loadSlider];
     // self.years = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
 }
 
