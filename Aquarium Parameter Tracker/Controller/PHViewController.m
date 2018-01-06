@@ -76,7 +76,7 @@
     [self.view addGestureRecognizer:swipeLeftRecognizer];
     [self.view addGestureRecognizer:swipeRightRecognizer];
     
-    [self test];
+  //  [self test];
     [self loadData];
 }
 

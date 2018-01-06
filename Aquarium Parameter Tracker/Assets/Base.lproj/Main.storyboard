@@ -40,20 +40,14 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h41-kd-ThK" customClass="PNLineChart">
                                 <rect key="frame" x="0.0" y="101" width="375" height="477"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no data to show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUT-kO-Yrw">
-                                        <rect key="frame" x="93" y="228" width="188" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="YUT-kO-Yrw" firstAttribute="centerY" secondItem="h41-kd-ThK" secondAttribute="centerY" id="8S5-Ir-yG2"/>
-                                    <constraint firstItem="YUT-kO-Yrw" firstAttribute="centerX" secondItem="h41-kd-ThK" secondAttribute="centerX" id="YN0-iz-XrP"/>
-                                </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no data to show" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUT-kO-Yrw">
+                                <rect key="frame" x="93" y="323" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gz8-Mo-ktA">
                                 <rect key="frame" x="220" y="578" width="145" height="30"/>
                                 <state key="normal" title="Add New Parameters"/>
@@ -87,9 +81,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OJO-t1-gHD" firstAttribute="top" secondItem="h41-kd-ThK" secondAttribute="bottom" id="0CS-eJ-Kex"/>
+                            <constraint firstItem="YUT-kO-Yrw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0CY-bo-Kmu"/>
                             <constraint firstItem="tOO-Ne-lXb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="0a3-mX-7cn"/>
                             <constraint firstItem="OJO-t1-gHD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="13X-yR-VMb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ges-xQ-7pb" secondAttribute="trailing" constant="10" id="2SQ-rI-RsH"/>
+                            <constraint firstItem="YUT-kO-Yrw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3UZ-fQ-gYF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h41-kd-ThK" secondAttribute="trailing" id="8vp-Vr-IxR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gz8-Mo-ktA" secondAttribute="trailing" constant="10" id="Osb-d4-WBw"/>
                             <constraint firstItem="acO-GW-reK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="PkC-0A-cwk"/>
@@ -346,8 +342,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in one or all of the parameters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iss-8m-0yS">
-                                <rect key="frame" x="35" y="94" width="305" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe and fill in one or all of the parameters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iss-8m-0yS">
+                                <rect key="frame" x="20.5" y="94" width="334" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -463,6 +459,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cuy-b8-zkM"/>
+        <segue reference="Z0G-mu-8fT"/>
     </inferredMetricsTieBreakers>
 </document>
