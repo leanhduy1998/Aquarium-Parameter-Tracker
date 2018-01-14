@@ -12,11 +12,13 @@
 
 - (IBAction)cancelBtnPressed:(id)sender;
 - (IBAction)doneBtnPressed:(id)sender;
+    @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+    
+-(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
+-(void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
+    
 
-@property (weak, nonatomic) IBOutlet UITextField *phTextField;
-@property (weak, nonatomic) IBOutlet UITextField *ammoniaTF;
-@property (weak, nonatomic) IBOutlet UITextField *nitriteTF;
-@property (weak, nonatomic) IBOutlet UITextField *nitrateTF;
+@property (weak, nonatomic) IBOutlet UITextField *chemTF;
 
 - (void) showAlertWrongFormat;
 

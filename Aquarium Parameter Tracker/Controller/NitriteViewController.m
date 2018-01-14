@@ -134,9 +134,4 @@
     // self.years = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
 }
     
-    
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 @end
