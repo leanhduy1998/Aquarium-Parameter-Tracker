@@ -85,7 +85,7 @@
 
 - (void)loadSlider {
     //loadSlider: (int) totalPage: (UISlider*) slider: (UILabel*) pageLabel
-    [Helper loadSlider:_totalPage :_slider :_pageLabel];
+    [Helper loadSlider:_totalPage :_slider :_navigationBarTitle];
     [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
@@ -93,11 +93,11 @@
     _slider.value = roundf(sender.value / 1.0) * 1.0;
     _currentPage = _slider.value;
     [self loadLineChart];
-    NSString *pageText = [NSString stringWithFormat: @"Page %d of %d.", (int) _slider.value, _totalPage];
-    [_pageLabel setText:pageText];
+    NSString *pageText = [NSString stringWithFormat: @"Page %d of %d", (int) _slider.value, _totalPage];
+    _navigationBarTitle.title = pageText;
 }
     
-- (IBAction)helpBtnClicked:(id)sender {
+- (IBAction)helpBtnPressed:(id)sender {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
                                                                    message:@"Swipe left and right to see your data."
                                                             preferredStyle:UIAlertControllerStyleAlert];
@@ -111,8 +111,8 @@
     
 - (void)loadLineChart {
     PNLineChartData *nitriteLine = [PNLineChartData new];
-    //loadLineChart:(NSMutableArray*)timeLabels: (NSMutableArray*) chemData: (NSMutableArray*) sortedDateArr: (int)currentPage :(int)totalPage: (NSMutableDictionary*) dataDic: (PNLineChart*) lineChart: (UILabel*) noDataLabel: (PNLineChartData*) chemLine;
-    [Helper loadLineChart:_timeLabels :_nitriteData :_sortedDateArr :_currentPage :_totalPage :_dataDic :_lineChart :_noDataLabel : nitriteLine : 2];
+    // loadLineChart:(NSMutableArray*)timeLabels
+    [Helper loadLineChart:_timeLabels chemData:_nitriteData sortedDateArr:_sortedDateArr currentPage:_currentPage totalPage:_totalPage dataDic:_dataDic lineChart:_lineChart noDataLabel:_noDataLabel chemLine:nitriteLine chemNum:2];
     
     nitriteLine.color = [UIColor colorWithRed:186.0f/255.0f
                                         green:85.0f/255.0f
@@ -132,6 +132,13 @@
     [self loadLineChart];
     [self loadSlider];
     // self.years = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
+}
+    
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadData];
+    [self loadLineChart];
+    [self loadSlider];
 }
     
 @end

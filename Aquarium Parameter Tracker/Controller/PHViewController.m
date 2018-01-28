@@ -87,14 +87,7 @@
     }
 }
 
--(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
-    if(_currentPage >1){
-        _currentPage = _currentPage - 1;
-        [self loadLineChart];
-    }
-}
-
-- (IBAction)helpBtnClicked:(id)sender {
+- (IBAction)helpBtnPressed:(id)sender {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
         message:@"Swipe left and right to see your data."
         preferredStyle:UIAlertControllerStyleAlert];
@@ -105,18 +98,24 @@
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
+    
+-(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
+    if(_currentPage >1){
+        _currentPage = _currentPage - 1;
+        [self loadLineChart];
+    }
+}
 
 - (void)loadLineChart {
     PNLineChartData *phLine = [PNLineChartData new];
     phLine.color = PNLightBlue;
     
-    //loadLineChart:(NSMutableArray*)timeLabels: (NSMutableArray*) chemData: (NSMutableArray*) sortedDateArr: (int)currentPage :(int)totalPage: (NSMutableDictionary*) dataDic: (PNLineChart*) lineChart: (UILabel*) noDataLabel: (PNLineChartData*) chemLine;
-    [Helper loadLineChart:_timeLabels :_phData :_sortedDateArr :_currentPage :_totalPage :_dataDic :_lineChart :_noDataLabel : phLine : 0];
+    // loadLineChart:(NSMutableArray*)timeLabels
+    [Helper loadLineChart:_timeLabels chemData:_phData sortedDateArr:_sortedDateArr currentPage:_currentPage totalPage:_totalPage dataDic:_dataDic lineChart:_lineChart noDataLabel:_noDataLabel chemLine:phLine chemNum:0];
 }
 
 - (void)loadSlider {
-    //loadSlider: (int) totalPage: (UISlider*) slider: (UILabel*) pageLabel
-    [Helper loadSlider:_totalPage :_slider :_pageLabel];
+    [Helper loadSlider:_totalPage :_slider : _navigationBarTitle];
     [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
@@ -124,8 +123,8 @@
     _slider.value = roundf(sender.value / 1.0) * 1.0;
     _currentPage = _slider.value;
     [self loadLineChart];
-    NSString *pageText = [NSString stringWithFormat: @"Page %d of %d.", (int) _slider.value, _totalPage];
-    [_pageLabel setText:pageText];
+    NSString *pageText = [NSString stringWithFormat: @"Page %d of %d", (int) _slider.value, _totalPage];
+    _navigationBarTitle.title = pageText;
 }
 
 - (void)test{
@@ -133,7 +132,6 @@
     [_ammoniaData addObjectsFromArray:@[@0,@0.25,@0.5,@1,@2,@4,@8,@2,@1,@4,@0,@0.25,@0.5,@1,@2,@4,@8,@2,@1,@4,@0,@0.25,@0.5,@1,@2,@4,@8,@2,@1,@4]];
     [_nitriteData addObjectsFromArray:@[@0,@0.25,@0.5,@1,@2,@5,@0.5,@1,@0.25,@0,@0,@0.25,@0.5,@1,@2,@5,@0.5,@1,@0.25,@0,@0,@0.25,@0.5,@1,@2,@5,@0.5,@1,@0.25,@0]];
     [_nitrateData addObjectsFromArray:@[@0,@5,@10,@20,@40,@80,@160,@0,@5,@10,@0,@5,@10,@20,@40,@80,@160,@0,@5,@10,@0,@5,@10,@20,@40,@80,@160,@0,@5,@10]];
-   // [_timeLabels addObjectsFromArray:@[@1,@2.5,@4,@8,@9,@4,@3,@0,@2,@5]];
     
     NSDate *date = [NSDate date];
     
@@ -203,7 +201,6 @@
 
 - (void)loadData {
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    //loadData: (NSManagedObjectContext*)managedObjectContext: (NSMutableDictionary*) dataDic: (NSMutableArray*) sortedDateArr: (int) totalPage: (int) currentPage
     [Helper loadData:managedObjectContext :_dataDic :_sortedDateArr :&(_totalPage) :&(_currentPage)];
 }
 
@@ -211,7 +208,13 @@
     [super viewDidAppear:animated];
     [self loadLineChart];
     [self loadSlider];
-   // self.years = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
+}
+    
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadData];
+    [self loadLineChart];
+    [self loadSlider];
 }
 
 @end

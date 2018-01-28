@@ -14,18 +14,10 @@
 
 @implementation Helper
 
-+  (void)loadLineChart:(NSMutableArray*)timeLabels: (NSMutableArray*) chemData: (NSMutableArray*) sortedDateArr: (int)currentPage :(int)totalPage: (NSMutableDictionary*) dataDic: (PNLineChart*) lineChart: (UILabel*) noDataLabel: (PNLineChartData*) chemLine: (int) chemNum{
++  (void)loadLineChart: (NSMutableArray*)timeLabels chemData: (NSMutableArray*)chemData sortedDateArr :(NSMutableArray*)sortedDateArr currentPage :(int)currentPage totalPage :(int)totalPage dataDic:(NSMutableDictionary*)dataDic lineChart :(PNLineChart*)lineChart noDataLabel :(UILabel*)noDataLabel chemLine :(PNLineChartData*) chemLine chemNum :(int) chemNum{
     
     [timeLabels removeAllObjects];
     [chemData removeAllObjects];
-    
-    if(sortedDateArr.count==0){
-        [noDataLabel setHidden:NO];
-        [lineChart setHidden:YES];
-        return;
-    }
-    [noDataLabel setHidden:YES];
-    [lineChart setHidden:NO];
     
     if(currentPage == totalPage){
         for (int i = (currentPage-1)*5; i < currentPage*5; i++){
@@ -36,10 +28,6 @@
             NSManagedObject *yearCore = [dataDic objectForKey:sortedDateArr[i]];
             NSManagedObject *monthCore = [yearCore valueForKey:@"yearMonth"];
             NSManagedObject *dayCore = [monthCore valueForKey:@"monthDay"];
-            
-            NSString *label = [NSString stringWithFormat:@"%ld/%ld", [[monthCore valueForKey:@"month"] integerValue], [[dayCore valueForKey:@"day"] integerValue]];
-            
-            [timeLabels addObject:label];
             
             NSNumber *chem;
             switch(chemNum){
@@ -56,7 +44,15 @@
                     chem = [NSNumber numberWithFloat:[[dayCore valueForKey:@"nitrate"] floatValue]] ;
                     break;
             }
-            [chemData addObject:chem];
+            
+            NSNumber *temp = [NSNumber numberWithInt:-1];
+            
+            if(![chem isEqualToNumber:temp]){
+                NSString *label = [NSString stringWithFormat:@"%ld/%ld", [[monthCore valueForKey:@"month"] integerValue], [[dayCore valueForKey:@"day"] integerValue]];
+                
+                [timeLabels addObject:label];
+                [chemData addObject:chem];
+            }
         }
         
     }
@@ -66,14 +62,29 @@
             NSManagedObject *monthCore = [yearCore valueForKey:@"yearMonth"];
             NSManagedObject *dayCore = [monthCore valueForKey:@"monthDay"];
             
-            NSString *label = [NSString stringWithFormat:@"%ld/%ld", [[monthCore valueForKey:@"month"] integerValue], [[dayCore valueForKey:@"day"] integerValue]];
-            
-            [timeLabels addObject:label];
-            
+        
             NSNumber *chem = [NSNumber numberWithFloat:[[dayCore valueForKey:@"ammonia"] floatValue]] ;
-            [chemData addObject:chem];
+            
+            NSNumber *temp = [NSNumber numberWithInt:-1];
+            
+            if(![chem isEqualToNumber:temp]){
+                NSString *label = [NSString stringWithFormat:@"%ld/%ld", [[monthCore valueForKey:@"month"] integerValue], [[dayCore valueForKey:@"day"] integerValue]];
+                
+                [timeLabels addObject:label];
+                [chemData addObject:chem];
+            }
+            
+            
         }
     }
+    
+    if(timeLabels.count==0){
+        [noDataLabel setHidden:NO];
+        [lineChart setHidden:YES];
+        return;
+    }
+    [noDataLabel setHidden:YES];
+    [lineChart setHidden:NO];
     
     [lineChart setXLabels:timeLabels];
 
@@ -100,7 +111,11 @@
     lineChart.showSmoothLines = YES;
 }
 
-+ (void)loadData: (NSManagedObjectContext*)managedObjectContext: (NSMutableDictionary*) dataDic: (NSMutableArray*) sortedDateArr: (int*) totalPage: (int*) currentPage {
++ (void)loadData: (NSManagedObjectContext*)managedObjectContext :(NSMutableDictionary*) dataDic :(NSMutableArray*) sortedDateArr :(int*) totalPage :(int*) currentPage {
+    
+    [sortedDateArr removeAllObjects];
+    *totalPage = 0;
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Year"];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"year" ascending:YES];
     fetchRequest.sortDescriptors = @[sortDescriptor];
@@ -143,17 +158,13 @@
     *currentPage = *totalPage;
 }
 
-+  (void)loadSlider:(NSMutableArray*)timeLabels: (NSMutableArray*) chemData: (NSMutableArray*) sortedDateArr: (int)currentPage :(int)totalPage: (NSMutableDictionary*) dataDic: (PNLineChart*) lineChart: (UILabel*) noDataLabel: (PNLineChartData*) chemLine: (int) chemNum{
-    
-}
-
-+ (void)loadSlider: (int) totalPage: (UISlider*) slider: (UILabel*) pageLabel {
++ (void)loadSlider: (int)totalPage :(UISlider*) slider :(UINavigationItem*) navigationItem {
     slider.minimumValue = 1.0;
     slider.maximumValue = totalPage;
     slider.value = totalPage;
     
-    NSString *pageText = [NSString stringWithFormat: @"Page %d of %d.", totalPage, totalPage];
-    [pageLabel setText:pageText];
+    NSString *pageText = [NSString stringWithFormat: @"Page %d of %d", totalPage, totalPage];
+    navigationItem.title = pageText;
 }
 
 @end

@@ -13,8 +13,8 @@
 
 @interface Helper : NSObject
 
-+  (void)loadLineChart:(NSMutableArray*)timeLabels: (NSMutableArray*) chemData: (NSMutableArray*) sortedDateArr: (int)currentPage :(int)totalPage: (NSMutableDictionary*) dataDic: (PNLineChart*) lineChart: (UILabel*) noDataLabel: (PNLineChartData*) chemLine: (int) chemNum;
-+ (void)loadData: (NSManagedObjectContext*)managedObjectContext: (NSMutableDictionary*) dataDic: (NSMutableArray*) sortedDateArr: (int*) totalPage: (int*) currentPage;
-+ (void)loadSlider: (int) totalPage: (UISlider*) slider: (UILabel*) pageLabel;
++  (void)loadLineChart: (NSMutableArray*)timeLabels chemData: (NSMutableArray*)chemData sortedDateArr :(NSMutableArray*)sortedDateArr currentPage :(int)currentPage totalPage :(int)totalPage dataDic:(NSMutableDictionary*)dataDic lineChart :(PNLineChart*)lineChart noDataLabel :(UILabel*)noDataLabel chemLine :(PNLineChartData*) chemLine chemNum :(int) chemNum;
++ (void)loadData: (NSManagedObjectContext*)managedObjectContext :(NSMutableDictionary*) dataDic :(NSMutableArray*) sortedDateArr :(int*) totalPage :(int*) currentPage;
++ (void)loadSlider: (int)totalPage :(UISlider*) slider :(UINavigationItem*) navigationItem;
 
 @end

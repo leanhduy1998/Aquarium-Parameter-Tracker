@@ -14,11 +14,11 @@
 @property (strong, nonatomic) IBOutlet PNLineChart *lineChart;
     @property (weak, nonatomic) IBOutlet UILabel *noDataLabel;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
-@property (weak, nonatomic) IBOutlet UILabel *pageLabel;
-
-
     
-- (IBAction)helpBtnClicked:(id)sender;
+    @property (weak, nonatomic) IBOutlet UINavigationItem *navigationBarTitle;
+    
+- (IBAction)helpBtnPressed:(id)sender;
+    
     
 
 -(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
@@ -34,8 +34,6 @@
 
 - (void)loadLineChart;
 - (void)loadData;
-
-- (NSURL *)applicationDocumentsDirectory;
 
 @end
 

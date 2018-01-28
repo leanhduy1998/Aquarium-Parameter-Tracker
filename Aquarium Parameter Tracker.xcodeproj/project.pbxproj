@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C83FC2D201D62330046593D /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C83FC2C201D62330046593D /* DetailView.m */; };
 		241544BE1FD11D1C007E08EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544BD1FD11D1C007E08EF /* AppDelegate.m */; };
 		241544C11FD11D1C007E08EF /* PHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241544C01FD11D1C007E08EF /* PHViewController.m */; };
 		241544C41FD11D1C007E08EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241544C21FD11D1C007E08EF /* Main.storyboard */; };
@@ -51,6 +52,8 @@
 		01C4500174673230FFCB07A0 /* libPods-Aquarium Parameter TrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Parameter TrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1371F60788AC7BBF710DB920 /* libPods-Aquarium Aquameter TrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aquarium Aquameter TrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE1F3696F0A7ACA6B70A525 /* Pods-Aquarium Parameter TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquarium Parameter TrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aquarium Parameter TrackerTests/Pods-Aquarium Parameter TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1C83FC2B201D62330046593D /* DetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
+		1C83FC2C201D62330046593D /* DetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
 		241544B91FD11D1B007E08EF /* Aquarium Parameter Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aquarium Parameter Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		241544BC1FD11D1C007E08EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		241544BD1FD11D1C007E08EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -144,6 +147,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1C83FC2E201D633C0046593D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C83FC2B201D62330046593D /* DetailView.h */,
+				1C83FC2C201D62330046593D /* DetailView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		241544B01FD11D1B007E08EF = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +185,7 @@
 				241544BC1FD11D1C007E08EF /* AppDelegate.h */,
 				241544BD1FD11D1C007E08EF /* AppDelegate.m */,
 				243DE3A91FD39ACA00369DFC /* Model */,
+				1C83FC2E201D633C0046593D /* View */,
 				243DE3AA1FD39AD100369DFC /* Controller */,
 				241544CD1FD11D1C007E08EF /* Info.plist */,
 				241544CE1FD11D1C007E08EF /* main.m */,
@@ -550,6 +563,7 @@
 				243DE3AE1FD39B9400369DFC /* DetailViewController.m in Sources */,
 				241544C71FD11D1C007E08EF /* Aquarium_Aquameter_Tracker.xcdatamodeld in Sources */,
 				241544C11FD11D1C007E08EF /* PHViewController.m in Sources */,
+				1C83FC2D201D62330046593D /* DetailView.m in Sources */,
 				241544CF1FD11D1C007E08EF /* main.m in Sources */,
 				24217C711FDBD6C700B86AF9 /* SharedData.m in Sources */,
 				246C01D31FF95EC100DE591D /* NitrateViewController.m in Sources */,
@@ -731,7 +745,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Parameter-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -752,7 +766,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Duy-Le.Aquarium-Parameter-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

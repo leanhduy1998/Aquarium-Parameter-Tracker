@@ -9,11 +9,11 @@
 #import "DetailViewController.h"
 #import "CoreData/CoreData.h"
 #import "AppDelegate.h"
+#import "DetailView.h"
+
 
 @interface DetailViewController ()
     @property (assign) int currentChem;
-    @property (assign) int currentChemNumber;
-    
     @property (assign) double currentPh;
     @property (assign) double currentAmmonia;
     @property (assign) double currentNitrite;
@@ -41,6 +41,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addSwipeListener];
+    [self addChemTFListener];
+    
+    _currentChem = 0;
+    _currentPh = -1;
+    _currentAmmonia = -1;
+    _currentNitrite = -1;
+    _currentNitrate = -1;
+    
+    [self displayUI];
+    [self updateCurrentChemNumberLabel];
+    
+    [self addKeyboardListener];
+}
+    
+- (void) addChemTFListener{
+    _chemTF.delegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:_chemTF];
+}
+    
+- (void) addSwipeListener{
     UISwipeGestureRecognizer *swipeLeftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToLeftWithGestureRecognizer:)];
     swipeLeftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     
@@ -49,290 +71,212 @@
     
     [self.view addGestureRecognizer:swipeLeftRecognizer];
     [self.view addGestureRecognizer:swipeRightRecognizer];
+}
     
-    _currentChem = 0;
-    _currentChemNumber = 0;
-    _currentPh = -1;
-    _currentAmmonia = -1;
-    _currentNitrite = -1;
-    _currentNitrate = -1;
+- (void) addKeyboardListener{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+}
+    
+- (void)keyboardWillShow:(NSNotification*)notification {        [UIView animateWithDuration:0.25 animations:^{
+        CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+            
+        CGRect newFrame = [[self view] frame];
+        newFrame.origin.y -= keyboardSize.height;
+        [[self view] setFrame:newFrame];
+             
+        }completion:^(BOOL finished)
+        {
+             
+        }];
+}
+    
+- (void)keyboardWillBeHidden:(NSNotification*)notification {
+    [UIView animateWithDuration:0.25 animations:^{
+        CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+        
+        CGRect newFrame = [[self view] frame];
+        newFrame.origin.y += keyboardSize.height;
+        [[self view] setFrame:newFrame];
+         
+     }completion:^(BOOL finished)
+     {
+         
+     }];
+    
+}
+    
+- (void)textFieldDidChange:(NSNotification *)notification {
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    NSNumber *chemNum = [numberFormatter numberFromString:_chemTF.text];
+    if (chemNum != nil) {
+        switch(_currentChem){
+            case ph:
+            _currentPh = [chemNum doubleValue];
+            break;
+            
+            case ammonia:
+            _currentAmmonia = [chemNum doubleValue];
+            break;
+            
+            case nitrite:
+            _currentNitrite = [chemNum doubleValue];
+            break;
+            
+            case nitrate:
+            _currentNitrate = [chemNum doubleValue];
+            break;
+            
+            default:
+            break;
+        }
+        [self displayUI];
+    }
+    else{
+        switch(_currentChem){
+            case ph:
+            _currentPh = -1;
+            break;
+            
+            case ammonia:
+            _currentAmmonia = -1;
+            break;
+            
+            case nitrite:
+            _currentNitrite = -1;
+            break;
+            
+            case nitrate:
+            _currentNitrate = -1;
+            break;
+            
+            default:
+            break;
+        }
+    }
+    
+    [self updateCurrentChemNumberLabel];
+    numberFormatter = NULL;
+}
+    
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
 }
 
 -(void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
-    if(_currentChem == 0){
-        _currentChem = 3;
-    }
-    else{
-        _currentChem = _currentChem - 1;
-    }
-    [self displayUI];
-}
-    
--(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
     if(_currentChem == 3){
         _currentChem = 0;
     }
     else{
         _currentChem = _currentChem + 1;
     }
+    
+    [self updateChemTF];
     [self displayUI];
 }
     
--(void) displayUI{
-    switch(_currentChem){
+-(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
+    if(_currentChem == 0){
+        _currentChem = 3;
+    }
+    else{
+        _currentChem = _currentChem - 1;
+    }
+    
+    [self updateChemTF];
+    [self displayUI];
+}
+    
+-(void) updateCurrentChemNumberLabel{
+    NSMutableString *currentChemNumberString = [NSMutableString stringWithString:@""];
+    if(_currentPh!=-1){
+        NSString *currentPHNumberString = [NSString stringWithFormat: @"pH: %.2f  ", _currentPh];
+        [currentChemNumberString appendString:currentPHNumberString];
+    }
+    else{
+        [currentChemNumberString appendString:@"pH: ?  "];
+    }
+    
+    if(_currentAmmonia!=-1){
+        NSString *currentPHNumberString = [NSString stringWithFormat: @"Ammonia: %.2f  ", _currentAmmonia];
+        [currentChemNumberString appendString:currentPHNumberString];
+    }
+    else{
+        [currentChemNumberString appendString:@"Ammonia: ?  "];
+    }
+    
+    if(_currentNitrite!=-1){
+        NSString *currentPHNumberString = [NSString stringWithFormat: @"Nitrite: %.2f  ", _currentNitrite];
+        [currentChemNumberString appendString:currentPHNumberString];
+    }
+    else{
+        [currentChemNumberString appendString:@"Nitrite: ?  "];
+    }
+    
+    if(_currentNitrate!=-1){
+        NSString *currentPHNumberString = [NSString stringWithFormat: @"Nitrate: %.2f", _currentNitrate];
+        [currentChemNumberString appendString:currentPHNumberString];
+    }
+    else{
+        [currentChemNumberString appendString:@"Nitrate: ?"];
+    }
+    _currentChemNumberLabel.text = currentChemNumberString;
+}
+    
+-(void) updateChemTF{
+    switch (_currentChem) {
         case ph:
-        if(_currentChemNumber == 0){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:179.0f/255.0f
-                                                    green:236.0f/255.0f
-                                                    blue:255.0f/255.0f
-                                                    alpha:1.0f];
+        if(_currentPh!=-1){
+            _chemTF.text = [NSString stringWithFormat: @"%.2f", _currentPh];
+            
+            NSString *currentPHNumberString = [NSString stringWithFormat: @"%.2f", _currentPh];
         }
-        else if(_currentChemNumber < 6){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:255.0f/255.0f
-                                                    green:255.0f/255.0f
-                                                    blue:255.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber >= 6 && _currentChemNumber <= 6.4){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:245.0f/255.0f
-                                                    green:253.0f/255.0f
-                                                    blue:161.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 6.4 && _currentChemNumber <= 6.6){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:206.0f/255.0f
-                                                    green:238.0f/255.0f
-                                                    blue:156.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 6.6 && _currentChemNumber <= 6.8){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:183.0f/255.0f
-                                                    green:231.0f/255.0f
-                                                    blue:170.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 6.8 && _currentChemNumber <= 7){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:162.0f/255.0f
-                                                    green:220.0f/255.0f
-                                                    blue:162.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 7 && _currentChemNumber <= 7.2){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:138.0f/255.0f
-                                                    green:212.0f/255.0f
-                                                    blue:170.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 7.4 && _currentChemNumber <= 7.6){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:103.0f/255.0f
-                                                    green:193.0f/255.0f
-                                                    blue:192.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 7.2 && _currentChemNumber <= 7.4){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:236.0f/255.0f
-                                                    green:183.0f/255.0f
-                                                    blue:36.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 7.6 && _currentChemNumber <= 7.8){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:247.0f/255.0f
-                                                    green:188.0f/255.0f
-                                                    blue:84.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 7.8 && _currentChemNumber <= 8){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:220.0f/255.0f
-                                                    green:160.0f/255.0f
-                                                    blue:106.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 8 && _currentChemNumber <= 8.2){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:183.0f/255.0f
-                                                    green:126.0f/255.0f
-                                                    blue:107.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 8.2 && _currentChemNumber <= 8.4){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:161.0f/255.0f
-                                                    green:119.0f/255.0f
-                                                    blue:165.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 8.4){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:135.0f/255.0f
-                                                    green:106.0f/255.0f
-                                                    blue:160.0f/255.0f
-                                                    alpha:1.0f];
+        else{
+            _chemTF.text = @"";
         }
         break;
         
         case ammonia:
-        if(_currentChemNumber == 0){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:250.0f/255.0f
-                                                    green:244.0f/255.0f
-                                                    blue:44.0f/255.0f
-                                                    alpha:1.0f];
+        if(_currentAmmonia!=-1){
+            _chemTF.text = [NSString stringWithFormat: @"%.2f", _currentAmmonia];
+            NSString *currentPHNumberString = [NSString stringWithFormat: @"%.2f", _currentAmmonia];
         }
-        else if(_currentChemNumber > 0 && _currentChemNumber <= 0.25){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:246.0f/255.0f
-                                                    green:244.0f/255.0f
-                                                    blue:12.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 0.25 && _currentChemNumber <= 0.5){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:219.0f/255.0f
-                                                    green:236.0f/255.0f
-                                                    blue:44.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 0.5 && _currentChemNumber <= 1){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:179.0f/255.0f
-                                                    green:219.0f/255.0f
-                                                    blue:68.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 1 && _currentChemNumber <= 2){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:114.0f/255.0f
-                                                    green:193.0f/255.0f
-                                                    blue:60.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 2 && _currentChemNumber <= 4){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:48.0f/255.0f
-                                                    green:167.0f/255.0f
-                                                    blue:64.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 4){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:39.0f/255.0f
-                                                    green:118.0f/255.0f
-                                                    blue:68.0f/255.0f
-                                                    alpha:1.0f];
+        else{
+            _chemTF.text = @"";
         }
         break;
         
         case nitrite:
-        if(_currentChemNumber == 0){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:180.0f/255.0f
-                                                    green:230.0f/255.0f
-                                                    blue:218.0f/255.0f
-                                                    alpha:1.0f];
+        if(_currentNitrite!=-1){
+            _chemTF.text = [NSString stringWithFormat: @"%.2f", _currentNitrite];
+            NSString *currentPHNumberString = [NSString stringWithFormat: @"%.2f", _currentNitrite];
         }
-        else if(_currentChemNumber > 0 && _currentChemNumber <= 0.25){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:173.0f/255.0f
-                                                    green:184.0f/255.0f
-                                                    blue:214.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 0.25 && _currentChemNumber <= 0.5){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:156.0f/255.0f
-                                                    green:148.0f/255.0f
-                                                    blue:187.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 0.5 && _currentChemNumber <= 1){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:149.0f/255.0f
-                                                    green:126.0f/255.0f
-                                                    blue:168.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 1 && _currentChemNumber <= 2){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:165.0f/255.0f
-                                                    green:110.0f/255.0f
-                                                    blue:165.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 2){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:160.0f/255.0f
-                                                    green:101.0f/255.0f
-                                                    blue:159.0f/255.0f
-                                                    alpha:1.0f];
+        else{
+            _chemTF.text = @"";
         }
         break;
         
         case nitrate:
-        if(_currentChemNumber == 0){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:248.0f/255.0f
-                                                    green:251.0f/255.0f
-                                                    blue:7.0f/255.0f
-                                                    alpha:1.0f];
+        if(_currentNitrate!=-1){
+            _chemTF.text = [NSString stringWithFormat: @"%.2f", _currentNitrate];
+            NSString *currentPHNumberString = [NSString stringWithFormat: @"%.2f", _currentNitrate];
         }
-        else if(_currentChemNumber > 0 && _currentChemNumber <= 5){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:250.0f/255.0f
-                                                    green:199.0f/255.0f
-                                                    blue:27.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 5 && _currentChemNumber <= 10){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:246.0f/255.0f
-                                                    green:164.0f/255.0f
-                                                    blue:32.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 10 && _currentChemNumber <= 20){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:240.0f/255.0f
-                                                    green:168.0f/255.0f
-                                                    blue:70.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 20 && _currentChemNumber <= 40){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:238.0f/255.0f
-                                                    green:107.0f/255.0f
-                                                    blue:65.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 40 && _currentChemNumber <= 80){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:232.0f/255.0f
-                                                    green:105.0f/255.0f
-                                                    blue:62.0f/255.0f
-                                                    alpha:1.0f];
-        }
-        else if(_currentChemNumber > 80){
-            _backgroundImageView.backgroundColor = [UIColor
-                                        colorWithRed:189.0f/255.0f
-                                                    green:82.0f/255.0f
-                                                    blue:71.0f/255.0f
-                                                    alpha:1.0f];
+        else{
+            _chemTF.text = @"";
         }
         break;
         
         default:
         break;
     }
+}
+
+    
+-(void) displayUI{
+    [DetailView displayLabelAndBackgroundColorForCurrentChemStats:_currentChem chemLabel:_chemLabel backgroundImageView:_backgroundImageView currentPh:_currentPh currentAmmonia:_currentAmmonia currentNitrite:_currentNitrite currentNitrate:_currentNitrate];
 }
     
 
@@ -342,12 +286,12 @@
 
 - (void) showAlertWrongFormat{
     UIAlertController * alert=[UIAlertController alertControllerWithTitle:@"Some Parameters Are Not In The Right Format!"
-                                                    message:@"Please Chech Them Again!"
-                                                    preferredStyle:UIAlertControllerStyleAlert];
+        message:@"Please Chech Them Again!"
+        preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* doneBtn = [UIAlertAction actionWithTitle:@"Okay"
-                                                    style:UIAlertActionStyleDefault
-                                                    handler:nil];
+        style:UIAlertActionStyleDefault
+        handler:nil];
     
     [alert addAction:doneBtn];
     [self presentViewController:alert animated:YES completion:nil];
@@ -363,9 +307,8 @@
     
     [dayCore setValue:phNumber forKey:@"ph"];
     [dayCore setValue:ammoniaNumber forKey:@"ammonia"];
-    [dayCore setValue:@-1 forKey:@"nitrite"];
-    [dayCore setValue:@-1 forKey:@"nitrate"];
-    
+    [dayCore setValue:nitriteNumber forKey:@"nitrite"];
+    [dayCore setValue:nitrateNumber forKey:@"nitrate"];
     
     NSDate *date = [NSDate date];
     
@@ -375,8 +318,8 @@
     NSInteger month = [components month];
     NSInteger year = [components year];
     
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *dateComponents = [gregorian components:(NSHourCalendarUnit  | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:date];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *dateComponents = [gregorian components:(NSCalendarUnitHour  | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
     NSInteger hour = [dateComponents hour];
     NSInteger minute = [dateComponents minute];
     NSInteger second = [dateComponents second];
@@ -396,7 +339,6 @@
     
     [yearCore setValue:monthCore forKey:@"yearMonth"];
     
-    //  [((AppDelegate*)[[UIApplication sharedApplication] delegate]) saveContext];
     
     NSError *error = nil;
     if ([[self managedObjectContext] save:&error] == NO) {

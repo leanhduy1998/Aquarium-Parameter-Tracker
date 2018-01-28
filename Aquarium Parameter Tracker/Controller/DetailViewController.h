@@ -13,6 +13,10 @@
 - (IBAction)cancelBtnPressed:(id)sender;
 - (IBAction)doneBtnPressed:(id)sender;
     @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+    @property (weak, nonatomic) IBOutlet UILabel *chemLabel;
+    @property (weak, nonatomic) IBOutlet UILabel *currentChemNumberLabel;
+    
+    
     
 -(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
 -(void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;

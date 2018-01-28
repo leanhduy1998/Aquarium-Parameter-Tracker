@@ -23,7 +23,7 @@
 
 - (id)init {
     if (self = [super init]) {
-        timeArray = [[NSString alloc] initWithString:@"Default Property Value"];
+        timeArray = @"Default Property Value";
     }
     return self;
 }
